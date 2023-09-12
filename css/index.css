@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/**
+* !                    ---  Header Section  ---
+**/
+header {
+  position: relative;
+}
+header .header-top {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #254083;
+  color: #FAFAFA;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  padding: 1rem;
+}
+header .header-top .left {
+  display: none;
+  flex-direction: unset;
+  align-items: center;
+}
+header .header-top .right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header-top .right .socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+header .header-top .right .btn-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+header .header-top .right .btn-group .btn-text {
+  color: #FAFAFA;
+  font-size: 0.875rem;
+  background: none;
+  text-align: center;
+  cursor: pointer;
+}
+header .header-top .right .btn-group .btn-text a {
+  color: inherit;
+}
+header .header-top .right .btn-group .btn-text .colored {
+  color: #FFAB21;
+}
+header .header-top .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+header .header-top i {
+  font-size: 0.875rem;
+  cursor: pointer;
+  color: #FFAB21;
+}
+header .nav {
+  display: none;
+}
+header .nav-sm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 0px 2px 7px 0px rgba(138, 138, 138, 0.25);
+}
+header .nav-sm .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+header .nav-sm .buttons i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+header .menu {
+  width: 20rem;
+  height: 100%;
+  padding: 2rem 1rem;
+  box-shadow: 0px 2px 7px 0px rgba(138, 138, 138, 0.25);
+  position: fixed;
+  top: 0;
+  background: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+header .menu .nav-top .top {
+  width: 17rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E3E3E3;
+  padding-bottom: 1rem;
+}
+header .menu .nav-top .top i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #005B7F;
+}
+header .menu .nav-top .top i:hover {
+  color: #FFAB21;
+}
+header .menu .nav-top .nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  align-items: flex-start;
+  border-bottom: 1px solid #E3E3E3;
+  padding-bottom: 1rem;
+}
+header .menu .nav-top .nav-menu li {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+header .menu .nav-top .nav-menu li:hover a {
+  color: #FFAB21;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+header .menu .nav-top .nav-menu li a {
+  color: #254083;
+}
+
+/**
+* !                    -x-  Header Section  -x-
+**/
+/**
+* ? =========================== MEADIA QUERIES ====================================================================================================== 
+**/
+@media (max-width: 1040px) {
+  .header-top .right {
+    width: 100%;
+  }
+}
+@media (min-width: 1040px) {
+  /**
+  * !                    ---  Header Section  ---
+  **/
+  header .header-top {
+    padding-inline: 4rem;
+    font-size: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header-top .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  header .header-top .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  header .header-top .right .socials {
+    margin-right: 1rem;
+  }
+  header .header-top i {
+    font-size: 0.75rem;
+  }
+  header .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 7px 0px rgba(138, 138, 138, 0.25);
+  }
+  header .nav .lg.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  header .nav .lg.nav-menu li {
+    font-size: 0.875rem;
+  }
+  header .nav .lg.nav-menu li:hover a {
+    color: #FFAB21;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+  header .nav .lg.nav-menu li a {
+    color: #404040;
+  }
+  header .nav .btn {
+    width: 8rem;
+    background: #FFAB21;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #FAFAFA;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  header .nav .btn:hover {
+    background-color: #254083;
+  }
+  header .nav .btn a {
+    color: #FAFAFA;
+  }
+  header .nav-sm,
+  header .menu {
+    display: none;
+  }
+  .logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  /**
+  * !                    -x-  Header Section  -x-
+  **/
+  /* =======================================END===================================================================== */
+}
+/**
+* ? ================x========== MEADIA QUERIES ======================x=============================================================================== 
+**/

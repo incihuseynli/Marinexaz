@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import "_reset.scss";
+@import "variables";
+
+
+body{
+  font-family: $fontFamily-body;
+}
+/**
+* !                    ---  Header Section  ---
+**/
+header{
+  position: relative;
+  .header-top {
+  width: 100%;
+  height: 2.5rem;
+  background-color: $primary-blue;
+  color: $white-clr;
+  @include display(flex,row);
+  justify-content: space-between;
+  font-size: $fontSize-body4;
+  padding: $sm-margin;
+  .left {
+    @include display(none,unset);
+  }
+  .right {
+    @include display(flex,row);
+    justify-content: space-between;
+    .socials {
+      @include display(flex,row);
+      gap: 1rem;
+    }
+    .btn-group {
+      @include display(flex,row);
+        gap: 1rem;
+      .btn-text {
+        @include btn-text($white-clr);
+        a {
+          color: inherit;
+        }
+        .colored {
+          color: $primary-yellow;
+        }
+      }
+    }
+  }
+  .row {
+    @include display(flex,row);
+    gap: 1rem;
+  }
+  i {
+    font-size: $fontSize-body3;
+    cursor: pointer;
+    color: $primary-yellow;
+  }
+}
+  .nav{
+    display: none;
+  }
+  
+  .nav-sm{
+    @include display(flex,row);
+    justify-content: space-between;
+    padding: $sm-margin;
+    box-shadow: $boxShadow2;
+    .buttons{
+      @include display(flex,row);
+      gap: 1rem;
+      i{
+        font-size: $fontSize-title2;
+        cursor: pointer;
+      }
+    }
+  }
+  .menu{
+    width: 20rem;
+    height: 100%;
+    padding: 2rem $sm-margin;
+    box-shadow: $boxShadow2;
+    position: fixed;
+    top: 0;
+    background: $white-clr;
+    @include display(flex, column);
+    align-items: flex-start;
+    justify-content: space-between;
+    .nav-top{
+      .top{
+        width: 17rem;
+        @include display(flex, row);
+        justify-content: space-between;
+        border-bottom: 1px solid $secondary-LightGray;
+        padding-bottom: 1rem;
+        i{
+          font-size: $fontSize-title2;
+          cursor: pointer;
+          color: $primary-LightBlue;
+          &:hover{
+            color: $primary-yellow;
+          }
+        }
+      }
+      .nav-menu{
+        @include display(flex, column);
+        gap: 1.5rem;
+        align-items: flex-start;
+        border-bottom: 1px solid $secondary-LightGray;
+        padding-bottom: 1rem;
+        li{
+          font-size: $fontSize-body1;
+          font-weight: 500;
+          &:hover{
+            a{
+              color: $primary-yellow;
+              text-decoration: underline;
+              text-underline-offset: .3rem;
+            }
+          }
+          a{
+            color: $primary-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**
+* !                    -x-  Header Section  -x-
+**/
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+* ? =========================== MEADIA QUERIES ====================================================================================================== 
+**/
+@media (max-width: 1040px) {
+    .header-top{
+        .right{
+            width: 100%;
+        }
+    }
+}
+
+// For large devices (laptops, desktops...)
+@media (min-width: 1040px) {
+  /**
+* !                    ---  Header Section  ---
+**/
+  header {
+    .header-top {
+      padding-inline: $lg-margin;
+      font-size: $fontSize-body5;
+      @include display(flex,row);
+      justify-content: space-between;
+      .left {
+        @include display(flex,row);
+        gap: 1rem;
+      }
+      .right {
+        @include display(flex,row);
+        gap: 1rem;
+
+        .socials {
+          margin-right: 1rem;
+        }
+      }
+      i {
+        font-size: $fontSize-body4;
+      }
+    }
+    .nav{
+      @include display(flex,row);
+      justify-content: space-between;
+      padding: 1rem $lg-margin;
+      background: $white-clr;
+      box-shadow: $boxShadow2;
+
+      // Menu Links
+      .lg.nav-menu{
+        @include display(flex,row);
+        gap: 1rem;
+          li{
+          font-size: $fontSize-body3;
+          &:hover{
+            a{
+              color: $primary-yellow;
+              text-decoration: underline;
+              text-underline-offset: .3rem;
+            }
+          }
+          a{
+            color: $black-clr;
+          }
+        }
+      }
+      .btn{
+        @include btn(8rem, $primary-yellow);
+        transition: .6s;
+        &:hover{
+          background-color: $primary-blue;
+        }
+        a{
+          color: $white-clr;
+        }
+
+      }
+
+    }
+    .nav-sm,
+    .menu{
+      display: none;
+    }
+  }
+  // --- LOGO ---
+  .logo{
+    width: 4rem;
+    height: 4rem;
+  }
+  .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  // -x- LOGO -x-
+
+  
+  /**
+* !                    -x-  Header Section  -x-
+**/
+
+
+
+
+
+
+
+/* =======================================END===================================================================== */
+}
+
+
+
+
+
+
+/**
+* ? ================x========== MEADIA QUERIES ======================x=============================================================================== 
+**/

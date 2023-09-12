@@ -1,0 +1,64 @@
+// Margins and Paddings
+$lg-margin: 4rem;
+$md-margin: 2rem;
+$sm-margin: 1rem;
+
+
+// Colors
+$primary-yellow: #FFAB21;
+$primary-LightBlue: #005B7F;
+$primary-blue: #254083;
+$secondary-gray: #58595B;
+$secondary-LightGray: #E3E3E3;
+$white-clr: #FAFAFA;
+$black-clr: #404040;
+$line-clr:#FFE8BA;
+
+// Font Families
+$fontFamily-title: 'Montserrat', sans-serif;
+$fontFamily-body: 'Poppins', sans-serif;;
+
+// Font Sizes
+$fontSize-heading: 2.5rem; // =40px
+$fontSize-title1: 2rem; // =32px
+$fontSize-title2: 1.5rem; // =24px
+$fontSize-title3: 1.25rem; // =20px
+$fontSize-body1: 1.125rem; // =18px
+$fontSize-body2: 1rem; // =16px
+$fontSize-body3: .875rem; // =14px
+$fontSize-body4: .75rem; // =12px
+$fontSize-body5: .625rem; // =10px
+
+// Box shadows
+$boxShadow1: 0px 1px 7px 0px #A8A8A840;
+$boxShadow2:  0px 2px 7px 0px rgba(138, 138, 138, 0.25);
+
+// Border Radius
+$border-radius1: 50%;
+$border-radius2: 1rem;
+$border-radius3: .625rem;
+
+
+
+@mixin display($display,$dir){
+    display: $display;
+    flex-direction: $dir;
+    align-items: center;
+}
+@mixin btn($width, $bg-clr){
+    width: $width;
+    background: $bg-clr;
+    height: 2.5rem;
+    border-radius: $border-radius3;
+    font-size: $fontSize-body2;
+    text-align: center;
+    color: $white-clr;
+    cursor: pointer;
+}
+@mixin btn-text($color){
+    color: $color;
+    font-size: $fontSize-body3;
+    background: none;
+    text-align: center;
+    cursor: pointer;
+}
