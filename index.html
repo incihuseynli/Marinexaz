@@ -16,6 +16,7 @@
     <title>Marinexaz</title>
   </head>
   <body>
+    <!-- ! -------- Header Section ------------------------ -->
     <header>
       <div class="header-top">
         <div class="left">
@@ -67,7 +68,9 @@
           <button>
             <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
           </button>
-          <i class="fa-solid fa-bars" id="hamburgerMenu"></i>
+          <button onclick="openMenu()">
+            <i class="fa-solid fa-bars" id="hamburgerMenu"></i>
+          </button>
         </div>
       </div>
       <div class="menu">
@@ -76,7 +79,9 @@
             <div class="logo">
               <img src="./assets/images/Logo.png" alt="logo" />
             </div>
-            <i class="fa-solid fa-xmark"></i>
+            <button id="closeBtn" onclick="closeMenu()">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
           </div>
           <ul class="sm nav-menu">
             <li><a href="about.html">Haqqımızda</a></li>
@@ -106,5 +111,252 @@
         </div>
       </div>
     </header>
+    <!-- ! ----x--- Header Section -----------x------------ -->
+
+    <!-- ! -------- Main Section ------------------------ -->
+    <main>
+      <!-- * --- Hero Section --- -->
+      <!-- <section class="hero">
+        <div class="hero-info">
+          <h1 class="heading">Daşınma qiyməti necə hesablanır?</h1>
+          <p>Məhsulunuzu seçin, kalkulyator vasitəsi ilə daşınma qiymətini hesablayın</p>
+          <div class="cargo-price">
+            <div class="cargo-detail" id="cargoWidth">
+              <div class="detail-header">
+                <h4>En:</h4>
+                <div class="input-group">
+                  <input id="widthNumber" type="number" placeholder="100" />
+                  <label for="widthNumber">sm</label>
+                </div>
+              </div>
+              <input type="range" name="" id="">
+            </div>
+            <div class="cargo-detail" id="cargoHeight">
+              <div class="detail-header">
+                <h4>Hündürlük:</h4>
+                <div class="input-group">
+                  <input id="heightNumber" type="number" placeholder="60" />
+                  <label for="heightNumber">sm</label>
+                </div>
+              </div>
+              <input type="range" name="" id="">
+            </div>
+            <div class="cargo-detail" id="cargoWeight">
+              <div class="detail-header">
+                <h4>Çəki:</h4>
+                <div class="input-group">
+                  <input id="weightNumber" type="number" placeholder="0.65" />
+                  <label for="weightNumber">kg</label>
+                </div>
+              </div>
+              <input type="range" name="" id="">
+            </div>
+          </div>
+        </div>
+        <div class="hero-image"></div>
+      </section> -->
+      <!-- * -x- Hero Section -x- -->
+
+      <!-- * --- Prices Section --- -->
+      <section class="price-list">
+        <h1 class="title">Daşınma qiyməti</h1>
+        <div class="container">
+          <table>
+            <thead>
+              <tr>
+                <th>Tariflər</th>
+                <th>Adi məhsul</th>
+                <th>Maye</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.00 kg - 0.10 kg</td>
+                <td>0.75 USD</td>
+                <td>0.75 USD</td>
+              </tr>
+              <tr>
+                <td>0.10 kg - 0.25 kg</td>
+                <td>1.00 USD</td>
+                <td>1.00 USD</td>
+              </tr>
+              <tr>
+                <td>0.25 kg - 0.50 kg</td>
+                <td>2.50 USD</td>
+                <td>2.50 USD</td>
+              </tr>
+              <tr>
+                <td>0.50 kg - 0.75 kg</td>
+                <td>3.50 USD</td>
+                <td>3.50 USD</td>
+              </tr>
+              <tr>
+                <td>0.75 kg - 1.00 kg</td>
+                <td>4.00 USD</td>
+                <td>4.00 USD</td>
+              </tr>
+              <tr>
+                <td>1.00 kg - 5.00 kg</td>
+                <td>kg / 4.00 USD</td>
+                <td>kg / 4.00 USD</td>
+              </tr>
+              <tr>
+                <td>5.00 kg - 10.00 kg</td>
+                <td>kg / 3.50 USD</td>
+                <td>kg / 3.50 USD</td>
+              </tr>
+              <tr>
+                <td>10.00 kg və üzəri</td>
+                <td>kg / 3.00 USD</td>
+                <td>kg / 3.00 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- * -x- Prices Section -x- -->
+
+      <!-- * --- How It Works Section --- -->
+      <section class="usage">
+        <h1 class="title">Biz necə işləyirik?</h1>
+        <div class="container">
+          <div class="step">
+            <div class="image">
+              <img src="./assets/images/Banners/image4.png" alt="">
+            </div>
+            <p>Qeydiyyatdan keçirsiniz</p>
+            <span class="line"></span>
+          </div>
+          <div class="step">
+            <div class="image">
+              <img src="./assets/images/Banners/image5.png" alt="">
+            </div>
+            <p>Saytımıza daxil olaraq məhsulu sifariş edirsiniz</p>
+            <span class="line"></span>
+          </div>
+          <div class="step">
+            <div class="image">
+              <img src="./assets/images/Banners/image6.png" alt="">
+            </div>
+            <p>Ən qısa zamanda məhsulunuzu sizə çatdırırıq</p>
+            <span class="line"></span>
+          </div>
+        </div>
+      </section>
+      <!-- * -x- How It Works Section -x- -->
+
+      <!-- * --- News List Section --- -->
+      <section class="news-list">
+        <h1 class="title">Yeniliklərdən anında xəbərdar olun</h1>
+        <div class="cards">
+          <div class="card">
+            <div class="card-image">
+              <img src="./assets/images/image 25.png" alt="">
+            </div>
+            <div class="card-body">
+              <h4 class="subtitle">Smart Customs-da bəyan et</h4>
+              <p class="content">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+              </p>
+              <div class="bottom">
+                <div class="date">
+                  <span>18</span>
+                  <span>May</span>
+                </div>
+                <button class="btn-rounded">
+                  <a href="#">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="./assets/images/image 26.png" alt="">
+            </div>
+            <div class="card-body">
+              <h4 class="subtitle">Bağlamanızı e.customs.gov.az və ya Smart Customs ilə bəyan edin!</h4>
+              <p class="content">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+              </p>
+              <div class="bottom">
+                <div class="date">
+                  <span>18</span>
+                  <span>May</span>
+                </div>
+                <button class="btn-rounded">
+                  <a href="#">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="./assets/images/image 27.png" alt="">
+            </div>
+            <div class="card-body">
+              <h4 class="subtitle">300 USD limit necə hesablanır?</h4>
+              <p class="content">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+              </p>
+              <div class="bottom">
+                <div class="date">
+                  <span>18</span>
+                  <span>May</span>
+                </div>
+                <button class="btn-rounded">
+                  <a href="#">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="./assets/images/image 28.png" alt="">
+            </div>
+            <div class="card-body">
+              <h4 class="subtitle">300 USD limit necə hesablanır?</h4>
+              <p class="content">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+              </p>
+              <div class="bottom">
+                <div class="date">
+                  <span>18</span>
+                  <span>May</span>
+                </div>
+                <button class="btn-rounded">
+                  <a href="#">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="link">
+          <h5>Bütün xəbərlər</h5>
+        </div>
+      </section>
+      <!-- * -x- News List Section -x- -->
+
+    </main>
+
+    <!-- ! ----x--- Main Section -----------x------------ -->
+
+    <!-- !--------------- JavaScript Files ------------------------------------------------ -->
+    <script src="./js/main.js"></script>
   </body>
 </html>

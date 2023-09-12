@@ -3,6 +3,8 @@ $lg-margin: 4rem;
 $md-margin: 2rem;
 $sm-margin: 1rem;
 
+$section-gap: 3rem;
+
 
 // Colors
 $primary-yellow: #FFAB21;
@@ -10,9 +12,11 @@ $primary-LightBlue: #005B7F;
 $primary-blue: #254083;
 $secondary-gray: #58595B;
 $secondary-LightGray: #E3E3E3;
+$white: #ffffff;
 $white-clr: #FAFAFA;
 $black-clr: #404040;
 $line-clr:#FFE8BA;
+$bg-clr: #F4F5F7;
 
 // Font Families
 $fontFamily-title: 'Montserrat', sans-serif;
@@ -41,8 +45,8 @@ $border-radius3: .625rem;
 
 
 @mixin display($display,$dir){
-    display: $display;
-    flex-direction: $dir;
+    display: $display ;
+    flex-direction: $dir ;
     align-items: center;
 }
 @mixin btn($width, $bg-clr){
@@ -61,4 +65,20 @@ $border-radius3: .625rem;
     background: none;
     text-align: center;
     cursor: pointer;
+}
+
+@mixin secTitle(){
+    font-family: $fontFamily-title;
+    font-size: $fontSize-title1;
+    text-align: center;
+    color: $primary-blue;
+    font-weight: 600;
+}
+
+@mixin subTitle($text-align){
+    font-size: $fontSize-body2;
+    color: $primary-blue;
+    font-weight: 600;
+    text-align: $text-align;
+    font-family: $fontFamily-title;
 }

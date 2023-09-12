@@ -7,6 +7,11 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+i {
+  cursor: pointer;
 }
 
 button {
@@ -41,10 +46,31 @@ table {
 
 body {
   font-family: "Poppins", sans-serif;
+  background: #F4F5F7;
+}
+
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #254083;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /**
-* !                    ---  Header Section  ---
+* !     ----------------  Header Section  -----------------------------------
 **/
 header {
   position: relative;
@@ -127,7 +153,6 @@ header .nav-sm .buttons {
 }
 header .nav-sm .buttons i {
   font-size: 1.5rem;
-  cursor: pointer;
 }
 header .menu {
   width: 20rem;
@@ -142,6 +167,15 @@ header .menu {
   align-items: center;
   align-items: flex-start;
   justify-content: space-between;
+  transform: translateX(-200%);
+  transition: transform 0.6s;
+}
+header .menu .nav-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  gap: 2rem;
 }
 header .menu .nav-top .top {
   width: 17rem;
@@ -154,13 +188,13 @@ header .menu .nav-top .top {
 }
 header .menu .nav-top .top i {
   font-size: 1.5rem;
-  cursor: pointer;
   color: #005B7F;
 }
 header .menu .nav-top .top i:hover {
   color: #FFAB21;
 }
 header .menu .nav-top .nav-menu {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,9 +215,50 @@ header .menu .nav-top .nav-menu li:hover a {
 header .menu .nav-top .nav-menu li a {
   color: #254083;
 }
+header .menu .nav-top .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  align-items: flex-start;
+}
+header .menu .nav-top .contact .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+header .menu .nav-top .contact .row i {
+  color: #FFAB21;
+}
+header .menu .nav-top .contact .row span {
+  color: #254083;
+}
+header .menu .socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  color: #254083;
+  font-size: 1.125rem;
+}
+header .menu .socials i:hover {
+  color: #FFAB21;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 /**
-* !                    -x-  Header Section  -x-
+* !     ---------------x-  Header Section  -x----------------------------------
 **/
 /**
 * ? =========================== MEADIA QUERIES ====================================================================================================== 
@@ -195,7 +270,7 @@ header .menu .nav-top .nav-menu li a {
 }
 @media (min-width: 1040px) {
   /**
-  * !                    ---  Header Section  ---
+  * !     ----------------  Header Section  -----------------------------------
   **/
   header .header-top {
     padding-inline: 4rem;
@@ -236,10 +311,10 @@ header .menu .nav-top .nav-menu li a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   header .nav .lg.nav-menu li {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   header .nav .lg.nav-menu li:hover a {
     color: #FFAB21;
@@ -270,17 +345,174 @@ header .menu .nav-top .nav-menu li a {
   header .menu {
     display: none;
   }
-  .logo {
-    width: 4rem;
-    height: 4rem;
+  /**
+  * !     ---------------x-  Header Section  -x----------------------------------
+  **/
+  /**
+  * !      --------------  Main Section  ---------------------------------
+  **/
+  .price-list {
+    padding: 3rem 4rem;
+    background-image: url("../assets/images/bg.png");
   }
-  .logo img {
+  .price-list .container {
+    width: 100%;
+    height: 34rem;
+    background: #FAFAFA;
+    border-radius: 0.625rem;
+    padding: 3rem 0;
+  }
+  .price-list .container table {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+  .price-list .container table thead th {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #254083;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    width: 12rem;
+  }
+  .price-list .container table tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .price-list .container table tbody tr td {
+    width: 12rem !important;
+    text-align: right;
+  }
+  .usage {
+    margin-inline: 4rem;
+  }
+  .usage .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 1rem;
+    margin-top: 3rem;
+  }
+  .usage .container .step {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .usage .container .step .image {
+    width: 15rem;
+    height: 14rem;
+  }
+  .usage .container .step .image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: center;
+  }
+  .usage .container .step p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #404040;
+  }
+  .usage .container .step .line {
+    display: block;
+    width: 8rem;
+    height: 1px;
+    background: #FFAB21;
+  }
+  .cards .card {
+    width: 20rem;
+    height: 26rem;
+    background: #ffffff;
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .cards .card .card-image {
+    width: 20rem;
+    height: 14rem;
+  }
+  .cards .card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+  }
+  .cards .card .card-body {
+    padding: 0 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .cards .card .card-body .subtitle {
+    font-size: 1rem;
+    color: #254083;
+    font-weight: 600;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+  }
+  .cards .card .card-body .content {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* start showing ellipsis when 3rd line is reached */
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #404040;
+    line-height: 1.6;
+  }
+  .cards .card .card-body .bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14rem;
+  }
+  .cards .card .card-body .bottom .date {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards .card .card-body .bottom .date span {
+    display: block;
+    font-weight: 600;
+    font-size: 0.875rem;
+    font-family: "Montserrat", sans-serif;
+  }
+  .cards .card .card-body .bottom .date span:first-child {
+    color: #254083;
+  }
+  .cards .card .card-body .bottom .date span:last-child {
+    color: #404040;
+  }
+  .cards .card .card-body .bottom .btn-rounded {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #FFAB21;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  .cards .card .card-body .bottom .btn-rounded a {
+    color: #ffffff;
+  }
+  .cards .card .card-body .bottom .btn-rounded:hover {
+    background: #254083;
   }
   /**
-  * !                    -x-  Header Section  -x-
+  * !     ---------------x-  Main Section  -x----------------------------------
   **/
   /* =======================================END===================================================================== */
 }
