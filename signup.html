@@ -121,37 +121,82 @@
 
     <!-- ! -------- Main Section ------------------------ -->
     <main>
-      <div class="formPage">
-        <div class="image">
-          <img src="./assets/images/Banners/image2v2.png" alt="Login" />
-        </div>
-        <div class="formContainer">
-          <img
-            class="lockImg"
-            src="./assets/images/bg-small images/lockDeepGray.png"
-            alt=""
-          />
-          <h4 class="subtitle">Daxil ol</h4>
-          <form class="loginForm" id="loginForm">
-            <input type="email" name="email" id="email" placeholder="E-mail" />
+      <div class="signUpContainer">
+        <h1 class="title">Yeni hesab yarat</h1>
+        <form class="signUpForm" id="signUpForm">
+          <div class="row">
+            <input type="text" name="firstname" id="firstname" placeholder="" />
+            <input type="text" name="lastname" id="lastname" placeholder="" />
+          </div>
+          <div class="row">
+            <input type="date" name="birthDate" id="birthDate" placeholder="" />
+            <select name="gender" id="gender">
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </div>
+          <div class="row">
             <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Şifrə"
+              type="number"
+              name="idCardSeries"
+              id="idCardSeries"
+              placeholder=""
             />
-            <input type="submit" value="Daxil ol" />
+            <input type="text" name="FIN" id="FIN" placeholder="" />
+          </div>
+          <div class="row">
+            <select name="city" id="city">
+              <option value=""></option>
+              <option value=""></option>
+            </select>
             <div class="inputBx">
-              <div class="row">
-                <input type="checkbox" name="rememberMe" id="rememberMe" />
-                <label for="rememberMe">Məni yadda saxla</label>
-              </div>
-              <p><a href="repairPassword.html">Parolu unutmusunuz?</a></p>
+              <select name="operatorID" id="operatorID">
+                <option value="050"></option>
+                <option value="051"></option>
+                <option value="055"></option>
+                <option value="070"></option>
+                <option value="077"></option>
+              </select>
+              <input
+                type="tel"
+                name="telNumber"
+                id="telNumber"
+                placeholder=""
+              />
             </div>
-          </form>
-          <div class="bottom">
-            <p>Hesabınız yoxdur?</p>
-            <a href="#">Qeydiyyatdan keç</a>
+          </div>
+          <textarea name="address" id="address"></textarea>
+          <div class="row">
+            <select name="branchPlace" id="branchPlace"></select>
+            <input type="email" name="email" id="email" placeholder="" />
+          </div>
+          <div class="row">
+            <div class="inputBx">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder=""
+              />
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <div class="inputBx">
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder=""
+              />
+              <i class="fa-solid fa-eye-slash"></i>
+            </div>
+          </div>
+          <input type="submit" value="Qeydiyyat" />
+        </form>
+        <div class="formBottom">
+          <span class="left">Hesabına <a href="#">Daxil ol</a></span>
+          <div class="right">
+            <i class="fa-solid fa-video"></i>
+            <span>Qeydiyyat prosesini izləyin</span>
           </div>
         </div>
       </div>
