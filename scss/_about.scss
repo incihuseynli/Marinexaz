@@ -1,0 +1,27 @@
+.about{
+    margin-inline: $sm-margin;
+    @include display(flex,column);
+    gap: 2rem;
+    .image{
+        width: 100%;
+        height: 10rem;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+   
+}
+
+
+@media (min-width:1040px){
+    .about{
+        margin-inline: $lg-margin;
+        .image{
+            width: 40rem;
+            height: 20rem;
+        }
+        
+    }
+}

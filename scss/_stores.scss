@@ -1,0 +1,33 @@
+.store-list {
+  .list {
+    margin: $md-margin;
+    @include displayGrid(repeat(1, 1fr), unset);
+    gap: 1.5rem;
+    .store {
+      width: 100%;
+      height: 8rem;
+      border-radius: $border-radius3;
+      background: $white;
+      @include display(flex,row);
+      justify-content: center;
+      box-shadow: $boxShadow1;
+    }
+  }
+}
+
+/*
+* ============================ MEADIA QUERIES =============================================
+*/
+
+@media (min-width: 1040px) {
+  .store-list {
+    .list {
+      margin: $md-margin $lg-margin 0;
+      @include displayGrid(repeat(4, 1fr), repeat(3, 1fr));
+      gap: 1rem;
+      .store {
+        width: 18rem;
+      }
+    }
+  }
+}

@@ -5,22 +5,21 @@ $sm-margin: 1rem;
 
 $section-gap: 3rem;
 
-
 // Colors
-$primary-yellow: #FFAB21;
-$primary-LightBlue: #005B7F;
+$primary-yellow: #ffab21;
+$primary-LightBlue: #005b7f;
 $primary-blue: #254083;
-$secondary-gray: #58595B;
-$secondary-LightGray: #E3E3E3;
+$secondary-gray: #58595b;
+$secondary-LightGray: #e3e3e3;
 $white: #ffffff;
-$white-clr: #FAFAFA;
+$white-clr: #fafafa;
 $black-clr: #404040;
-$line-clr:#FFE8BA;
-$bg-clr: #F4F5F7;
+$line-clr: #ffe8ba;
+$bg-clr: #f4f5f7;
 
 // Font Families
-$fontFamily-title: 'Montserrat', sans-serif;
-$fontFamily-body: 'Poppins', sans-serif;;
+$fontFamily-title: "Montserrat", sans-serif;
+$fontFamily-body: "Poppins", sans-serif;
 
 // Font Sizes
 $fontSize-heading: 2.5rem; // =40px
@@ -29,56 +28,127 @@ $fontSize-title2: 1.5rem; // =24px
 $fontSize-title3: 1.25rem; // =20px
 $fontSize-body1: 1.125rem; // =18px
 $fontSize-body2: 1rem; // =16px
-$fontSize-body3: .875rem; // =14px
-$fontSize-body4: .75rem; // =12px
-$fontSize-body5: .625rem; // =10px
+$fontSize-body3: 0.875rem; // =14px
+$fontSize-body4: 0.75rem; // =12px
+$fontSize-body5: 0.625rem; // =10px
 
 // Box shadows
-$boxShadow1: 0px 1px 7px 0px #A8A8A840;
-$boxShadow2:  0px 2px 7px 0px rgba(138, 138, 138, 0.25);
+$boxShadow1: 0px 1px 7px 0px #a8a8a840;
+$boxShadow2: 0px 2px 7px 0px rgba(138, 138, 138, 0.25);
 
 // Border Radius
 $border-radius1: 50%;
 $border-radius2: 1rem;
-$border-radius3: .625rem;
+$border-radius3: 0.625rem;
 
-
-
-@mixin display($display,$dir){
-    display: $display ;
-    flex-direction: $dir ;
-    align-items: center;
+@mixin display($display, $dir) {
+  display: $display;
+  flex-direction: $dir;
+  align-items: center;
 }
-@mixin btn($width, $bg-clr){
-    width: $width;
-    background: $bg-clr;
-    height: 2.5rem;
-    border-radius: $border-radius3;
-    font-size: $fontSize-body2;
-    text-align: center;
-    color: $white-clr;
-    cursor: pointer;
+@mixin btn($width, $bg-clr) {
+  width: $width;
+  background: $bg-clr;
+  height: 2.5rem;
+  border-radius: $border-radius3;
+  font-size: $fontSize-body2;
+  text-align: center;
+  color: $white-clr;
+  cursor: pointer;
 }
-@mixin btn-text($color){
-    color: $color;
-    font-size: $fontSize-body3;
-    background: none;
-    text-align: center;
-    cursor: pointer;
+@mixin btn-text($color) {
+  color: $color;
+  font-size: $fontSize-body3;
+  background: none;
+  text-align: center;
+  cursor: pointer;
 }
 
-@mixin secTitle(){
-    font-family: $fontFamily-title;
-    font-size: $fontSize-title1;
-    text-align: center;
-    color: $primary-blue;
-    font-weight: 600;
+@mixin secTitle() {
+  font-family: $fontFamily-title;
+  font-size: $fontSize-title1;
+  text-align: center;
+  color: $primary-blue;
+  font-weight: 600;
 }
 
-@mixin subTitle($text-align){
-    font-size: $fontSize-body2;
-    color: $primary-blue;
-    font-weight: 600;
-    text-align: $text-align;
-    font-family: $fontFamily-title;
+@mixin subTitle($text-align) {
+  font-size: $fontSize-body2;
+  color: $primary-blue;
+  font-weight: 600;
+  text-align: $text-align;
+  font-family: $fontFamily-title;
+}
+
+@mixin text($fontSize, $text-align) {
+  font-size: $fontSize;
+  font-weight: 400;
+  color: $black-clr;
+  line-height: 1.8;
+  letter-spacing: 0.125rem;
+  text-align: $text-align;
+}
+
+@mixin displayGrid($columns, $rows) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  align-items: center;
+}
+
+@mixin input($width) {
+  width: $width;
+  height: 3rem;
+  border: 2px solid $primary-blue;
+  border-radius: $border-radius2;
+  padding-inline: 1.5rem;
+  font-size: $fontSize-body2;
+  color: $black-clr;
+  font-weight: 500;
+}
+
+@mixin inputPlaceHolder($fontSize, $text-clr) {
+  font-size: $fontSize;
+  color: $text-clr;
+  font-weight: 500;
+}
+
+@mixin inputFocus($outline-clr) {
+  outline-color: $outline-clr;
+}
+@mixin selectAndTextarea($width, $fontSize) {
+  width: $width;
+  border: 2px solid $primary-blue;
+  border-radius: $border-radius3;
+  padding: 1.5rem;
+  appearance: none;
+  resize: none;
+  font-size: $fontSize;
+  font-weight: 600;
+  color: $black-clr;
+  letter-spacing: 0.03rem;
+  background: $white;
+}
+
+@mixin inputSubmit($width, $text-align, $fontSize, $bgClr,$bgClrHover, $border-clr) {
+  width: $width;
+  text-align: $text-align;
+  font-size: $fontSize;
+  font-weight: 600;
+  color: $white;
+  background-color: $bgClr;
+  cursor: pointer;
+  transition: 0.6s;
+  &:hover {
+    background-color: $bgClrHover;
+    border-color: $border-clr;
+  }
+}
+
+
+@mixin img(){
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

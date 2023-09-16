@@ -1,0 +1,32 @@
+.rules-container{
+    margin-inline: $sm-margin;
+    .rule-list{
+        @include display(flex,column);
+        gap: 1rem;
+        align-items: flex-start;
+        .subtitle{
+            @include subTitle(left);
+            color: $primary-yellow;
+            text-transform: uppercase;
+        }
+        li{
+            @include text($fontSize-body3,left);
+            list-style: disc ;
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+
+@media (min-width: 1040px) {
+    .rules-container{
+        margin-inline: $lg-margin;
+        .rule-list{
+            li{
+                @include text($fontSize-body2,left);
+            }
+        }
+    }
+}

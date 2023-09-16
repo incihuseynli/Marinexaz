@@ -1,0 +1,306 @@
+input {
+  @include input(100%);
+}
+select,
+textarea {
+  @include selectAndTextarea(100%, $fontSize-body2);
+}
+input[type="submit"] {
+  @include inputSubmit(
+    100%,
+    center,
+    $fontSize-body2,
+    $primary-blue,
+    $primary-yellow,
+    $primary-yellow
+  );
+}
+::placeholder {
+  @include inputPlaceHolder($fontSize-body2, $black-clr);
+}
+:focus {
+  @include inputFocus($primary-yellow);
+}
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.18rem;
+  border: 0.5px solid $primary-yellow;
+  accent-color: $primary-yellow;
+  background: $white;
+}
+
+/* 
+* ================ LOGIN | REGISTRATION | PASSWORD REPAIR PAGES ====================================== */
+
+.formPage {
+  margin: $md-margin $sm-margin;
+}
+.image {
+  display: none;
+}
+.formContainer {
+  margin-top: 8rem;
+  width: 100%;
+  height: 30rem;
+  background: $white;
+  border-radius: $border-radius3;
+  box-shadow: $boxShadow1;
+  position: relative;
+  padding: 6rem 2rem 2rem;
+  @include display(flex, column);
+  align-items: flex-start;
+  gap: 1.5rem;
+  .subtitle {
+    @include subTitle(left);
+    font-size: $fontSize-title2;
+  }
+  .lockImg {
+    position: absolute;
+    top: -5rem;
+    right: 2rem;
+  }
+  .bottom {
+    @include display(flex, row);
+    gap: 1rem;
+    margin-inline: auto;
+    font-size: $fontSize-body3;
+    color: $black-clr;
+    a {
+      color: $primary-blue;
+      cursor: pointer;
+      transition: 0.4s;
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
+      }
+    }
+  }
+  #getNewPasswordForm {
+    display: none !important;
+  }
+  #getCodeForm {
+    display: none !important;
+  }
+  .successAlert{
+    display: none !important;
+    text-align: center;
+    @include display(flex,column);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    span{
+      margin-top: -2rem;
+      @include text($fontSize-body5,center);
+    }
+    .btn-text{
+      @include btn-text($primary-yellow);
+      a{
+        color: $primary-yellow;
+      }
+    }
+  }
+}
+.loginForm {
+  width: 100%;
+  @include display(flex, column);
+  align-items: flex-start;
+  gap: 1.5rem;
+  .inputBx {
+    width: 100%;
+    @include display(flex, row);
+    justify-content: space-between;
+    font-size: $fontSize-body4;
+    color: $black-clr;
+    a {
+      color: $primary-blue;
+      cursor: pointer;
+      transition: 0.4s;
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
+      }
+    }
+    .row {
+      @include display(flex, row);
+      gap: 0.5rem;
+    }
+  }
+}
+// Password Repeair Page
+#formPage {
+  .formContainer {
+    width: 100%;
+    align-items: center;
+    .repairPassword {
+      @include display(flex, column);
+      gap: 2rem;
+      width: 100%;
+    }
+  }
+}
+.subtitle {
+  &.center {
+    margin: 2rem 0;
+    width: 100%;
+    @include subTitle(center);
+    font-size: $fontSize-title2;
+  }
+}
+
+/* 
+* =======x======== LOGIN | REGISTRATION | PASSWORD REPAIR PAGES =======x================================= */
+
+/*
+* =================== CONTACT SECTION ===================================================
+*/
+
+.contact {
+  margin: $md-margin $sm-margin;
+  @include displayGrid(repeat(1, 1fr), unset);
+  gap: 2rem;
+  align-items: center;
+  .info {
+    width: 100%;
+    order: 2;
+    box-shadow: $boxShadow1;
+    background: $white;
+    border-radius: $border-radius3;
+    padding: 4rem 1rem;
+    @include display(flex, column);
+    gap: 3rem;
+    letter-spacing: 0.125rem;
+    .col {
+      @include display(flex, column);
+      gap: 1rem;
+      .subtitle {
+        @include subTitle(center);
+        color: $black-clr;
+      }
+      .row {
+        @include display(flex, row);
+        gap: 0.5rem;
+        i {
+          color: $primary-yellow;
+          font-size: $fontSize-body1;
+        }
+        span {
+          @include text($fontSize-body5, left);
+        }
+      }
+    }
+  }
+  .form {
+    width: 100%;
+    background: $white;
+    @include display(flex, column);
+    gap: 1.5rem;
+    padding: 2rem 3rem;
+    border-radius: $border-radius3;
+    box-shadow: $boxShadow1;
+    order: 1;
+    .subtitle {
+      @include subTitle(center);
+      font-size: $fontSize-title1;
+    }
+    .contactForm {
+      @include display(flex, column);
+      gap: 1.5rem;
+      align-items: flex-start;
+
+      .inputBx {
+        width: 100%;
+        @include display(flex, column);
+        align-items: flex-start;
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+/*
+* =====x============== CONTACT SECTION ====x===============================================
+*/
+
+@media (min-width: 1040px) {
+  /*
+* =================== CONTACT SECTION ===================================================
+*/
+
+  .contact {
+    margin: $md-margin $lg-margin;
+    @include displayGrid(repeat(2, 1fr), unset);
+    gap: 6rem;
+    align-items: flex-start;
+    .info {
+      order: 1;
+      padding: 4rem 3rem;
+      align-items: flex-start;
+      gap: 2.5rem;
+      .col {
+        align-items: flex-start;
+        gap: 0.8rem;
+        .subtitle {
+          @include subTitle(left);
+        }
+        .row {
+          gap: 1rem;
+          span {
+            @include text($fontSize-body4, left);
+          }
+        }
+      }
+    }
+    .form {
+      order: 2;
+      gap: 1.5rem;
+      align-items: flex-start;
+      .subtitle {
+        @include subTitle(left);
+      }
+      .contactForm {
+        align-items: flex-start;
+        .inputBx {
+          @include display(flex, row);
+          input {
+            @include input(16rem);
+          }
+        }
+
+        select,
+        textarea {
+          width: 34rem;
+        }
+        input[type="submit"] {
+          width: 34rem;
+        }
+      }
+    }
+  }
+
+  /*
+* =====x============== CONTACT SECTION ====x===============================================
+*/
+
+  /* 
+* ================ LOGIN | REGISTRATION | PASSWORD REPAIR PAGES ====================================== */
+
+  .formPage {
+    margin: $md-margin $lg-margin;
+    @include displayGrid((28rem 30rem), unset);
+    gap: 10rem;
+  }
+  .image {
+    display: block;
+    width: 30rem;
+    height: 30rem;
+    img {
+      @include img();
+    }
+  }
+
+  .formContainer {
+    margin-top: 4rem;
+    width: 30rem;
+  }
+}
