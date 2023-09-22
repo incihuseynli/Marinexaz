@@ -1,7 +1,7 @@
 const STORE_URL = "http://localhost:3001/brands";
 
 const storesList = document.querySelector(".list");
-
+const storesBanner = document.querySelector(".stores");
 fetch(STORE_URL)
   .then((response) => {
     return response.json();
@@ -10,8 +10,16 @@ fetch(STORE_URL)
     data.forEach(({ id, image }) => {
       storesList.innerHTML += `
             <div class="store" data-id="${id}">
-                <img src=${image} alt="" />
+              <img src=${image} alt="" />
             </div>
             `;
+      
     });
   });
+
+// const storeLists = document.querySelector(".list");
+// const stores = document.querySelectorAll(".store");
+
+// let currentPage = 1;
+// let limit = 12;
+

@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -13,10 +18,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./css/index.css" />
     <title>Marinexaz</title>
   </head>
   <body>
-   
     <!-- ! -------- Header Section ------------------------ -->
     <header>
       <div class="header-top">
@@ -123,102 +130,109 @@
     <!-- ! -------- Main Section ------------------------ -->
     <main>
       <!-- * --- Hero Section --- -->
-      <!-- <section class="hero">
-        <div class="hero-info">
-          <h1 class="heading">Daşınma qiyməti necə hesablanır?</h1>
-          <p>Məhsulunuzu seçin, kalkulyator vasitəsi ilə daşınma qiymətini hesablayın</p>
-          <div class="cargo-price">
-            <div class="cargo-detail" id="cargoWidth">
-              <div class="detail-header">
-                <h4>En:</h4>
-                <div class="input-group">
-                  <input id="widthNumber" type="number" placeholder="100" />
-                  <label for="widthNumber">sm</label>
-                </div>
-              </div>
-              <input type="range" name="" id="">
-            </div>
-            <div class="cargo-detail" id="cargoHeight">
-              <div class="detail-header">
-                <h4>Hündürlük:</h4>
-                <div class="input-group">
-                  <input id="heightNumber" type="number" placeholder="60" />
-                  <label for="heightNumber">sm</label>
-                </div>
-              </div>
-              <input type="range" name="" id="">
-            </div>
-            <div class="cargo-detail" id="cargoWeight">
-              <div class="detail-header">
-                <h4>Çəki:</h4>
-                <div class="input-group">
-                  <input id="weightNumber" type="number" placeholder="0.65" />
-                  <label for="weightNumber">kg</label>
-                </div>
-              </div>
-              <input type="range" name="" id="">
-            </div>
-          </div>
+      <section class="hero-slider">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="hero-image"></div>
-      </section> -->
+      </section>
       <!-- * -x- Hero Section -x- -->
+
+      <!-- * --- Calculator Section --- -->
+      <section class="gridContainer">
+        <div class="img">
+          <img src="./assets/images/Banners/image1.png" alt="" />
+        </div>
+        <div class="content">
+          <h1 class="title">Daşınma qiyməti necə hesablanır?</h1>
+          <p>
+            Məhsulunuzu seçin, kalkulyator vasitəsi ilə daşınma qiymətini
+            hesablayın
+          </p>
+          <form class="form" id="shippingPriceCalcForm">
+            <div class="row">
+              <div class="select">
+                <div class="select-header">
+                  <h5 class="select-text">Ölkəni seçin:</h5>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="options">
+                  <li class="option">Türkiyə</li>
+                  <li class="option">ABŞ</li>
+                </ul>
+              </div>
+              <div class="select">
+                <div class="select-header">
+                  <h5 class="select-text">Məhsul tipi:</h5>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="options">
+                  <li class="option">Maye</li>
+                  <li class="option">Adi məhsul</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <input
+                type="number"
+                name="productWidth"
+                id="productWidth"
+                class="productWidth"
+                placeholder="En (sm)"
+              />
+              <input
+                type="number"
+                name="productHeight"
+                id="productHeight"
+                class="productHeight"
+                placeholder="Hündürlük (sm)"
+              />
+            </div>
+            <div class="row">
+              <input
+                type="number"
+                name="productLength"
+                id="productLength"
+                class="productLength"
+                placeholder="Uzunluq (sm)"
+              />
+              <input
+                type="number"
+                name="productWeight"
+                id="productWeight"
+                class="productWeight"
+                placeholder="Çəki (kq)"
+                step="0.01"
+                min="0"
+                max="100"
+              />
+            </div>
+            <input
+              type="text"
+              class="result"
+              id="result"
+              disabled
+              placeholder="Hesablama nəticəsi:"
+            />
+            <input type="submit" value="Hesabla" />
+          </form>
+        </div>
+      </section>
+      <!-- * -x- Calculator Section -x- -->
 
       <!-- * --- Prices Section --- -->
       <section class="price-list">
         <h1 class="title">Daşınma qiyməti</h1>
-        <div class="container">
-          <table>
-            <thead>
-              <tr>
-                <th>Tariflər</th>
-                <th>Adi məhsul</th>
-                <th>Maye</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>0.00 kg - 0.10 kg</td>
-                <td>0.75 USD</td>
-                <td>0.75 USD</td>
-              </tr>
-              <tr>
-                <td>0.10 kg - 0.25 kg</td>
-                <td>1.00 USD</td>
-                <td>1.00 USD</td>
-              </tr>
-              <tr>
-                <td>0.25 kg - 0.50 kg</td>
-                <td>2.50 USD</td>
-                <td>2.50 USD</td>
-              </tr>
-              <tr>
-                <td>0.50 kg - 0.75 kg</td>
-                <td>3.50 USD</td>
-                <td>3.50 USD</td>
-              </tr>
-              <tr>
-                <td>0.75 kg - 1.00 kg</td>
-                <td>4.00 USD</td>
-                <td>4.00 USD</td>
-              </tr>
-              <tr>
-                <td>1.00 kg - 5.00 kg</td>
-                <td>kg / 4.00 USD</td>
-                <td>kg / 4.00 USD</td>
-              </tr>
-              <tr>
-                <td>5.00 kg - 10.00 kg</td>
-                <td>kg / 3.50 USD</td>
-                <td>kg / 3.50 USD</td>
-              </tr>
-              <tr>
-                <td>10.00 kg və üzəri</td>
-                <td>kg / 3.00 USD</td>
-                <td>kg / 3.00 USD</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="table-Container">
+          <div class="header">
+            <h5>Tariflər</h5>
+            <h5>Adi məhsul</h5>
+            <h5>Maye</h5>
+          </div>
+          <div class="body">
+            <div class="col"></div>
+          </div>
         </div>
       </section>
       <!-- * -x- Prices Section -x- -->
@@ -226,147 +240,20 @@
       <!-- * --- How It Works Section --- -->
       <section class="usage">
         <h1 class="title">Biz necə işləyirik?</h1>
-        <div class="container">
-          <div class="step">
-            <div class="image">
-              <img src="./assets/images/Banners/image4.png" alt="" />
-            </div>
-            <p>Qeydiyyatdan keçirsiniz</p>
-            <span class="line"></span>
-          </div>
-          <div class="step">
-            <div class="image">
-              <img src="./assets/images/Banners/image5.png" alt="" />
-            </div>
-            <p>Saytımıza daxil olaraq məhsulu sifariş edirsiniz</p>
-            <span class="line"></span>
-          </div>
-          <div class="step">
-            <div class="image">
-              <img src="./assets/images/Banners/image6.png" alt="" />
-            </div>
-            <p>Ən qısa zamanda məhsulunuzu sizə çatdırırıq</p>
-            <span class="line"></span>
-          </div>
-        </div>
+        <div class="container"></div>
       </section>
       <!-- * -x- How It Works Section -x- -->
       <!-- * --- News List Section --- -->
       <section class="news-list">
         <h1 class="title">Yeniliklərdən anında xəbərdar olun</h1>
-        <div class="cards">
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/images/image25.png" alt="" />
-            </div>
-            <div class="card-body">
-              <h4 class="subtitle">Smart Customs-da bəyan et</h4>
-              <p class="content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry
-              </p>
-              <div class="bottom">
-                <div class="date">
-                  <span>18</span>
-                  <span>May</span>
-                </div>
-                <button class="btn-rounded">
-                  <a href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/images/image26.png" alt="" />
-            </div>
-            <div class="card-body">
-              <h4 class="subtitle">
-                Bağlamanızı e.customs.gov.az və ya Smart Customs ilə bəyan edin!
-              </h4>
-              <p class="content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry
-              </p>
-              <div class="bottom">
-                <div class="date">
-                  <span>18</span>
-                  <span>May</span>
-                </div>
-                <button class="btn-rounded">
-                  <a href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/images/image27.png" alt="" />
-            </div>
-            <div class="card-body">
-              <h4 class="subtitle">300 USD limit necə hesablanır?</h4>
-              <p class="content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry
-              </p>
-              <div class="bottom">
-                <div class="date">
-                  <span>18</span>
-                  <span>May</span>
-                </div>
-                <button class="btn-rounded">
-                  <a href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="cards"></div>
         <div class="link">
-          <h5>
-            <a href="news.html">Bütün xəbərlər</a>
-          </h5>
+          <h5><a href="news.html">Bütün xəbərlər</a></h5>
         </div>
       </section>
       <!-- * -x- News List Section -x- -->
       <!-- * --- Stores Banner Section --- -->
-      <section class="stores">
-        <div class="store">
-          <img src="./assets/images/brands/image11.png" alt="" />
-        </div>
-        <div class="store">
-          <img src="./assets/images/brands/amazon.png" alt="" />
-        </div>
-        <div class="store">
-          <img src="./assets/images/brands/asos.png" alt="" />
-        </div>
-        <div class="store">
-          <img src="./assets/images/brands/gratis.png" alt="" />
-        </div>
-        <div class="store">
-          <img src="./assets/images/brands/koton.png" alt="" />
-        </div>
-        <div class="store">
-          <img src="./assets/images/brands/mavi.png" alt="" />
-        </div>
-        <div class="store">
-          <img src="./assets/images/brands/watsons.png" alt="" />
-        </div>
-        <div class="store">
-          <img src="./assets/images/brands/mango.png" alt="" />
-        </div>
-      </section>
+      <section class="stores"></section>
       <!-- * -x- Stores Banner Section -x- -->
     </main>
 
@@ -420,6 +307,15 @@
     <!-- ! ----x--- Footer Section -----------x------------ -->
 
     <!-- !--------------- JavaScript Files ------------------------------------------------ -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/shippingPriceCalc.js"></script>
+    <script src="./js/brandBanners.js"></script>
+    <script src="./js/mobileMenu.js"></script>
+
+    <!-- Custom JavaScript File -->
     <script src="./js/main.js"></script>
   </body>
 </html>

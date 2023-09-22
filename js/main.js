@@ -1,16 +1,80 @@
-/**
- * ! -------------- Mobile Menu--------------------------------
- */
-const mobileMenu = document.querySelector(".menu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
-const closeBtn = document.getElementById("closeBtn");
 
-function openMenu() {
-  mobileMenu.style.transform = "translateX(0%)";
-  document.body.style.overflow = "hidden";
-}
-function closeMenu() {
-  mobileMenu.style.transform = "translateX(-200%)";
-}
+// PRICE TABLE
+const SHIPPING_PRICES_URL = "http://localhost:3001/shippingPrices";
+
+const tableContainer = document.querySelector(".table-Container .body .col");
+
+fetch(SHIPPING_PRICES_URL)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    data.forEach(({ id, tariff, forStandards, forLiquids }) => {
+      tableContainer.innerHTML += `
+        <div class="row" data-id=${id}>
+          <p data-usage-type="Tariflər">${tariff}</p>
+          <p data-usage-type="Adi məhsul">${forStandards}</p>
+          <p data-usage-type="Maye">${forLiquids}</p>
+        </div>
+      `;
+    });
+  });
 
 
+  // USAGE SECTION
+const usageContainer = document.querySelector(".container");
+
+const USAGE_URL = "http://localhost:3001/work";
+
+fetch(USAGE_URL)
+  .then((response) => {
+    return response.json();
+  })
+  .then((works) => {
+    works.forEach(({ image, content }) => {
+      usageContainer.innerHTML += `
+        <div class="step">
+        <div class="img">
+          <img src=${image} />
+        </div>
+        <p>${content}</p>
+        <span class="line"></span>
+      </div>
+        `;
+    });
+  });
+
+
+  const newsCards = document.querySelector(".cards");
+  
+  const NEWS_URL = "http://localhost:3001/news?&_limit=3";
+
+  fetch(NEWS_URL)
+  .then((response) => {
+    return response.json();
+  }).then((news) => {
+    news.forEach(({id,title, content, day, months, image}) => {
+      newsCards.innerHTML += `
+      <div class="card">
+      <div class="card-image">
+        <img src=${image} alt="" />
+      </div>
+      <div class="card-body">
+        <h4 class="subtitle">${title}</h4>
+        <p class="content">${content}</p>
+        <div class="bottom">
+          <div class="date">
+            <span>${day}</span>
+            <span>${months}</span>
+          </div>
+          <button class="btn-rounded">
+            <a href="news-post.html?id=${id}">
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+      `;
+    });
+  })

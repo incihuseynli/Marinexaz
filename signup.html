@@ -125,50 +125,119 @@
         <h1 class="title">Yeni hesab yarat</h1>
         <form class="signUpForm" id="signUpForm">
           <div class="row">
-            <input type="text" name="firstname" id="firstname" placeholder="" />
-            <input type="text" name="lastname" id="lastname" placeholder="" />
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="Ad"
+            />
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="Soyad"
+            />
           </div>
           <div class="row">
-            <input type="date" name="birthDate" id="birthDate" placeholder="" />
-            <select name="gender" id="gender">
-              <option value=""></option>
-              <option value=""></option>
-            </select>
+            <input
+              type="date"
+              name="birthDate"
+              id="birthDate"
+              placeholder="Doğum tarixi"
+            />
+            <div class="select">
+              <div class="select-header">
+                <h5 class="select-text">Cinsiyyət:</h5>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="options">
+                <li class="option">Kişi</li>
+                <li class="option">Qadın</li>
+                <li class="option">Digər</li>
+              </ul>
+            </div>
           </div>
           <div class="row">
             <input
               type="number"
               name="idCardSeries"
               id="idCardSeries"
-              placeholder=""
+              placeholder="Şəxsiyyət vəsiqəsinin seriyası"
             />
-            <input type="text" name="FIN" id="FIN" placeholder="" />
+            <input type="text" name="FIN" id="FIN" placeholder="FIN" />
           </div>
           <div class="row">
-            <select name="city" id="city">
-              <option value=""></option>
-              <option value=""></option>
-            </select>
-            <div class="inputBx">
-              <select name="operatorID" id="operatorID">
-                <option value="050"></option>
-                <option value="051"></option>
-                <option value="055"></option>
-                <option value="070"></option>
-                <option value="077"></option>
-              </select>
+            <div class="select">
+              <div class="select-header">
+                <h5 class="select-text">Şəhəri seçin:</h5>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="options" id="cityOptions">
+                <li class="option">Bərdə</li>
+                <li class="option">Tərtər</li>
+                <li class="option">Mingəcevir</li>
+                <li class="option">Ağcabədi</li>
+                <li class="option">Gəncə</li>
+                <li class="option">Lənkaran</li>
+                <li class="option">Xırdalan</li>
+                <li class="option">Sumqayıt</li>
+                <li class="option">Şəki</li>
+                <li class="option">Balakən</li>
+                <li class="option">Qəbələ</li>
+                <li class="option">Beylaqan</li>
+              </ul>
+            </div>
+            <div class="inputBx" style="padding: 0;">
+              <div class="select operatorID">
+                <div class="select-header">
+                  <h5 class="select-text">operator</h5>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <ul class="options">
+                  <li class="option">050</li>
+                  <li class="option">051</li>
+                  <li class="option">055</li>
+                  <li class="option">070</li>
+                  <li class="option">077</li>
+                </ul>
+              </div>
               <input
                 type="tel"
                 name="telNumber"
                 id="telNumber"
-                placeholder=""
+                placeholder="Telefon"
               />
             </div>
           </div>
-          <textarea name="address" id="address"></textarea>
           <div class="row">
-            <select name="branchPlace" id="branchPlace"></select>
-            <input type="email" name="email" id="email" placeholder="" />
+            <textarea
+              name="address"
+              id="address"
+              placeholder="Ünvan"
+            ></textarea>
+          </div>
+          <div class="row">
+            <div class="select">
+              <div class="select-header">
+                <h5 class="select-text">Təhvil almaq istədiyin filial:</h5>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="options" id="cityOptions">
+                <li class="option">Bərdə</li>
+                <li class="option">Tərtər</li>
+                <li class="option">Mingəcevir</li>
+                <li class="option">Ağcabədi</li>
+                <li class="option">Gəncə</li>
+                <li class="option">Lənkaran</li>
+                <li class="option">Xırdalan</li>
+                <li class="option">Sumqayıt</li>
+                <li class="option">Şəki</li>
+                <li class="option">Balakən</li>
+                <li class="option">Qəbələ</li>
+                <li class="option">Beylaqan</li>
+              </ul>
+            </div>
+            <input type="email" name="email" id="email" placeholder="E-mail" />
           </div>
           <div class="row">
             <div class="inputBx">
@@ -176,27 +245,29 @@
                 type="password"
                 name="password"
                 id="password"
-                placeholder=""
+                placeholder="Şifrə"
               />
-              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-eye" id="passwordIcon"></i>
             </div>
             <div class="inputBx">
               <input
-                type="password"
+                type="text"
                 name="confirmPassword"
                 id="confirmPassword"
-                placeholder=""
+                placeholder="Şifrənin təkrarı"
               />
-              <i class="fa-solid fa-eye-slash"></i>
+              <i class="fa-solid fa-eye-slash" id="confirmPasswordIcon"></i>
             </div>
           </div>
-          <input type="submit" value="Qeydiyyat" />
+          <div class="row">
+            <input type="submit" value="Qeydiyyat" />
+          </div>
         </form>
         <div class="formBottom">
-          <span class="left">Hesabına <a href="#">Daxil ol</a></span>
+          <span class="left">Hesabına <a href="login.html">Daxil ol</a></span>
           <div class="right">
             <i class="fa-solid fa-video"></i>
-            <span>Qeydiyyat prosesini izləyin</span>
+            <a href="#">Qeydiyyat prosesini izləyin</a>
           </div>
         </div>
       </div>
@@ -252,6 +323,10 @@
     <!-- ! ----x--- Footer Section -----------x------------ -->
 
     <!-- !--------------- JavaScript Files ------------------------------------------------ -->
-    <script src="./js/main.js"></script>
+    <!-- Custom JavaScript File -->
+    <script src="./js/forms.js"></script>
+    
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/mobileMenu.js"></script>
   </body>
 </html>

@@ -1,0 +1,207 @@
+.gridContainer {
+  @include displayGrid(repeat(1, 1fr), unset);
+  margin: $sm-margin;
+  .img{
+    display: none;
+  }
+  .content {
+    gap: 0.5rem;
+    .title {
+      margin-bottom: 0;
+      text-align: center;
+      }
+    p {
+      width: 85%;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .form {
+      width: 100%;
+      @include display(flex, column);
+      gap: 1.5rem;
+      .row {
+        width: 100%;
+        @include display(flex, column);
+        gap: 1.5rem;
+        select {
+          padding: 1rem;
+        }
+      }
+      .result {
+        background: $primary-blue;
+        color: $white;
+        &::placeholder {
+          color: $white;
+          font-weight: 600;
+        }
+      }
+      input[type="submit"] {
+        background: $primary-yellow;
+        border-color: $primary-yellow;
+        &:hover {
+          background: $primary-blue;
+          border-color: $primary-blue;
+        }
+      }
+    }
+  }
+}
+
+.tariffTable {
+  margin: 6rem $sm-margin 4rem;
+  position: relative;
+  .chooseCountry {
+    width: 16rem;
+    padding: 0.8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .table{
+    margin-top: 6rem;
+    display: none;
+  }
+}
+.table {
+  width: 100%;
+  @include display(flex, column);
+  gap: 0.8rem;
+  .head {
+    width: 100%;
+    padding-left: 12rem;
+    @include display(flex, row);
+    // justify-content: space-around;
+    text-align: center;
+    gap: 3rem;
+    p{
+        padding-left: 1rem;
+        font-size: $fontSize-body3;
+    }
+  }
+  .sort {
+    width: 100%;
+    height: 5rem;
+    background: $white;
+    border-radius: $border-radius3;
+    padding-inline: 2.5rem;
+    @include display(flex, row);
+    gap: 4rem;
+    box-shadow: $boxShadow2;
+    .subtitle {
+      width: 6rem;
+      @include subTitle(left);
+    }
+    .row {
+      flex: 1;
+      @include display(flex, row);
+      justify-content: space-around;
+      p{
+        width: 100%;
+        text-align: center; 
+      }
+    }
+  }
+}
+
+
+/** 
+* ? ================================== Media Queries ==================================
+**/
+
+@media (min-width: 1040px){
+
+.gridContainer {
+  @include displayGrid(repeat(2, 1fr), unset);
+  margin: $lg-margin $lg-margin 8rem;
+  .img{
+    display: block;
+  }
+  .content {
+    align-items: flex-start;
+    .title {
+      text-align: left;
+    }
+    p {
+      text-align: left;
+    }
+    .form {
+      .row {
+        @include display(flex, row);
+      }
+      }
+      
+    }
+  }
+  .tariffTable {
+    margin: 6rem $lg-margin 4rem;
+    position: relative;
+    .price-list{
+      display: none;
+    }
+    .chooseCountry {
+      width: 16rem;
+      padding: 0.8rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .table{
+      margin-top: 6rem;
+      display: block;
+    }
+   
+  }
+
+  .table {
+    width: 100%;
+    @include display(flex, column);
+    gap: 0.8rem;
+    .head {
+      width: 100%;
+      padding-left: 12rem;
+      @include display(flex, row);
+      text-align: center;
+      gap: 3rem;
+      p{
+          padding-left: 1rem;
+          font-size: $fontSize-body3;
+      }
+    }
+    .sort {
+      width: 100%;
+      height: 5rem;
+      background: $white;
+      border-radius: $border-radius3;
+      padding-inline: 2.5rem;
+      margin-top: 1rem;
+      @include display(flex, row);
+      gap: 4rem;
+      box-shadow: $boxShadow2;
+      .subtitle {
+        width: 6rem;
+        @include subTitle(left);
+      }
+      .row {
+        flex: 1;
+        @include display(flex, row);
+        justify-content: space-around;
+        p{
+          width: 100%;
+          text-align: center; 
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+/** 
+* ? ==============x=================== Media Queries ===================x==============
+**/

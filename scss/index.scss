@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-@import "_reset.scss";
-@import "variables";
-@import "about";
-@import "shipping_rules";
-@import "services";
-@import "newPost";
-@import "stores.scss";
-@import "forms";
+@import "_reset.scss", "variables", "about", "shipping_rules", "services",
+  "newPost", "stores.scss", "forms", "tariffs", "swipper","local_tariffs";
+
+/* 
+* ====================================START HERE=====================================================================*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -120,6 +118,7 @@ header {
     justify-content: space-between;
     transform: translateX(-200%);
     transition: transform 0.6s;
+    z-index: 2;
     .nav-top {
       @include display(flex, column);
       align-items: flex-start;
@@ -205,6 +204,58 @@ header {
 /**
 * !     ----------------  Main Section  -----------------------------------
 **/
+//  --- Prices Section ---
+.price-list {
+  padding: $lg-margin $sm-margin;
+  background-image: url("../assets/images/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.table-Container {
+  width: 100%;
+  background-color: $white;
+  border-radius: $border-radius3;
+  padding: 1rem;
+  @include display(flex, column);
+  .header {
+    width: 100%;
+    @include display(flex, row);
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem 0;
+    h5 {
+      width: 5rem;
+      @include subTitle(center);
+    }
+  }
+  .body {
+    width: 100%;
+    @include display(flex, row);
+    justify-content: space-between;
+    .col {
+      width: 100%;
+      .row {
+        width: 100%;
+        @include display(flex, row);
+        justify-content: space-between;
+        border-bottom: 1px solid rgba($primary-yellow, 0.2);
+        padding: 0.5rem 0;
+        &:last-child {
+          border: none;
+        }
+        &:hover {
+          background-color: rgba($primary-yellow, 0.3);
+        }
+        p {
+          width: 5rem;
+          padding: 0.5rem 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
 
 // --- How It Works Section ---
 .usage {
@@ -219,7 +270,7 @@ header {
       @include display(flex, column);
       gap: 1.5rem;
       text-align: center;
-      .image {
+      .img {
         width: 15rem;
         height: 14rem;
         img {
@@ -503,14 +554,15 @@ footer {
   color: $white;
 }
 .tabcontent {
-  // display: none;
-  width: 64rem;
-  margin-inline: auto;
+  width: 100%;
+  margin: $lg-margin 0;
+  padding-inline: 1rem;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
+  @include display(flex, column);
+  gap: 1.5rem;
   p {
-    margin-top: 1.5rem;
-    @include text($fontSize-body3, left);
+    @include text($fontSize-body3, center);
   }
 }
 
@@ -545,8 +597,8 @@ footer {
     @include display(flex, row);
     gap: 0.5rem;
     li {
-      width: 0.5rem;
-      height: 0.5rem;
+      width: 1rem;
+      height: 1rem;
       border-radius: 50%;
       border: 1px solid inherit;
       background-color: $secondary-LightGray;
@@ -557,7 +609,14 @@ footer {
     }
   }
 }
-
+.page-number{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid inherit;
+  background-color: $secondary-LightGray;
+  cursor: pointer;
+}
 .country {
   width: 10rem;
   height: 3rem;
@@ -568,13 +627,6 @@ footer {
   justify-content: center;
   gap: 1rem;
 }
-
-
-
-
-
-
-
 
 
 /**
@@ -672,44 +724,6 @@ footer {
   /**
 * !      --------------  Main Section  ---------------------------------
 **/
-
-  // --- Prices Section ---
-  .price-list {
-    padding: 3rem $lg-margin;
-    background-image: url("../assets/images/bg.png");
-    .container {
-      width: 100%;
-      height: 34rem;
-      background: $white-clr;
-      border-radius: $border-radius3;
-      padding: 3rem 0;
-      table {
-        width: 100%;
-        padding-inline: 2rem;
-        thead {
-          th {
-            font-size: $fontSize-title2;
-            font-weight: 600;
-            color: $primary-blue;
-            font-family: $fontFamily-title;
-            text-align: center;
-            width: 12rem;
-          }
-        }
-        tbody {
-          @include display(flex, column);
-          align-items: flex-end;
-          text-align: right;
-          tr {
-            td {
-              width: 12rem !important;
-              text-align: right;
-            }
-          }
-        }
-      }
-    }
-  }
 
   // --- How It Works Section ---
   .usage {
@@ -823,8 +837,36 @@ footer {
   .tab {
     @include display(flex, row);
   }
+  .tabcontent {
+    width: 64rem;
+    margin: $lg-margin auto;
+    p {
+      @include text($fontSize-body3, left);
+    }
+  }
 
-  
+  //  --- Prices Section ---
+  .price-list {
+    padding: $lg-margin;
+  }
+  .table-Container {
+    padding: 3rem 6rem;
+    .header {
+      h5 {
+        width: 10rem;
+        font-size: $fontSize-title3;
+      }
+    }
+    .body {
+      .col {
+        .row {
+          p {
+            width: 10rem;
+          }
+        }
+      }
+    }
+  }
 
   /**
 * * ==================x==============================================x==============
@@ -835,3 +877,6 @@ footer {
 /**
 * ? ================x========== MEADIA QUERIES ======================x=============================================================================== 
 **/
+
+/* 
+* ====================================END HERE=====================================================================*/

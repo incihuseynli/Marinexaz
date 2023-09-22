@@ -1,32 +1,69 @@
-.rules-container{
-    margin-inline: $sm-margin;
-    .rule-list{
-        @include display(flex,column);
-        gap: 1rem;
-        align-items: flex-start;
-        .subtitle{
-            @include subTitle(left);
-            color: $primary-yellow;
-            text-transform: uppercase;
-        }
-        li{
-            @include text($fontSize-body3,left);
-            list-style: disc ;
-            list-style-position: inside;
-            margin-bottom: 1rem;
-        }
+.rules-container {
+  margin-inline: $sm-margin;
+  padding-inline: 1rem;
+  .rule-list {
+    @include display(flex, column);
+    gap: 1rem;
+    align-items: flex-start;
+    .subtitle {
+      @include subTitle(left);
+      color: $primary-yellow;
+      text-transform: uppercase;
     }
+    li {
+      @include text($fontSize-body3, left);
+      list-style: disc;
+      list-style-position: inside;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
+.question {
+  width: 100%;
+  @include display(flex, column);
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1.5px solid $primary-blue;
+  overflow: hidden;
+  .questionBx {
+    width: 100%;
+    padding: 0 0.5rem;
+    @include display(flex, row);
+    justify-content: space-between;
+    cursor: pointer;
+    .subtitle {
+      @include subTitle(left);
+    }
+    i {
+      color: $primary-yellow;
+      transition: 0.6s;
+    }
+  }
+  .answer {
+    @include text($fontSize-body4, left);
+    transition: 0.6s;
+    padding: 0 0.5rem;
+    height: 0;
+  }
+  &.open .answer {
+    margin-bottom: 1rem;
+  }
+}
 
-
+/**
+*? ============================= MEDIA QUERIES ==================================================== 
+**/
 @media (min-width: 1040px) {
-    .rules-container{
-        margin-inline: $lg-margin;
-        .rule-list{
-            li{
-                @include text($fontSize-body2,left);
-            }
-        }
+  .rules-container {
+    margin-inline: $lg-margin;
+    .rule-list {
+      li {
+        @include text($fontSize-body2, left);
+      }
     }
+  }
 }
+/**
+*? =============x=============== MEDIA QUERIES =================x================================== 
+**/

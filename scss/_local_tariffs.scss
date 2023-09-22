@@ -1,0 +1,55 @@
+.places {
+  margin-inline: $sm-margin;
+  .tabs {
+    width: 100%;
+    @include display(flex, column);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .tab-btn {
+      width: 16rem;
+      background: $white;
+      border: 2px solid $primary-blue;
+      border-radius: $border-radius3;
+      padding: 1rem;
+      @include text($fontSize-body4, center);
+      font-weight: 600;
+      transition: 0.6s ease-in-out;
+      &.active {
+        background: $primary-blue;
+        color: $white;
+      }
+    }
+  }
+  .contents {
+    .content {
+      display: none;
+      transition: 0.6s ease-in-out;
+      &.active {
+        display: block;
+      }
+      .tariffTable {
+        margin: 0;
+      }
+    }
+  }
+}
+/**
+*? =================================== MEADIA QUERIES ======================================================================================
+**/
+@media (min-width: 1040px) {
+  .places {
+    margin-inline: $lg-margin;
+    .tabs {
+      width: 100%;
+      @include display(flex, row);
+      gap: 0.5rem;
+      .tab-btn {
+        width: 100%;
+      }
+    }
+  }
+}
+/**
+*? ===================x=============== MEADIA QUERIES ================x=====================================================================
+**/

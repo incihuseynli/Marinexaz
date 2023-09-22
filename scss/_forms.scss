@@ -1,9 +1,101 @@
 input {
   @include input(100%);
 }
-select,
+
 textarea {
   @include selectAndTextarea(100%, $fontSize-body2);
+}
+
+.select {
+  width: 100%;
+  @include display(flex, column);
+  gap: 1rem;
+  align-items: flex-start;
+  position: relative;
+  .select-header {
+    @include selectAndTextarea(100%, $fontSize-body2);
+    padding: 0.8rem 1rem;
+    @include display(flex, row);
+    justify-content: space-between;
+    cursor: pointer;
+    i {
+      transition: 0.6s;
+    }
+  }
+  .options {
+    position: absolute;
+    top: 4rem;
+    z-index: 3;
+    width: 100%;
+    background: $white;
+    border-radius: $border-radius2;
+    @include display(flex, column);
+    display: none;
+    align-items: flex-start;
+    transition: 0.6s linear;
+    .option {
+      width: 100%;
+      padding: 1.5rem;
+      @include text($fontSize-body3, left);
+      cursor: pointer;
+      &:first-child {
+        border-top-left-radius: $border-radius2;
+        border-top-right-radius: $border-radius2;
+      }
+      &:last-child {
+        border-bottom-left-radius: $border-radius2;
+        border-bottom-right-radius: $border-radius2;
+      }
+      &:hover {
+        background: rgba($primary-yellow, 0.8);
+        color: $white;
+      }
+    }
+  }
+  #cityOptions {
+    height: 11rem;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      height: 0.5rem;
+      width: 0.5rem;
+    }
+    &::-webkit-scrollbar-track {
+      background: $secondary-LightGray;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $primary-yellow;
+      border-radius: 0.5rem;
+    }
+    .option {
+      &:first-child {
+        border-top-left-radius: $border-radius2;
+        border-top-right-radius: 0;
+      }
+      &:last-child {
+        border-bottom-left-radius: $border-radius2;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  &.active .options {
+    display: flex;
+  }
+  &.active i {
+    transform: rotate(180deg);
+  }
+}
+.operatorID {
+  width: 10rem;
+  .select-header {
+    border-left: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+#telNumber {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 input[type="submit"] {
   @include inputSubmit(
@@ -21,6 +113,18 @@ input[type="submit"] {
 :focus {
   @include inputFocus($primary-yellow);
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
@@ -35,7 +139,11 @@ input[type="checkbox"] {
 
 .formPage {
   margin: $md-margin $sm-margin;
+  .img {
+    display: none;
+  }
 }
+
 .image {
   display: none;
 }
@@ -76,26 +184,26 @@ input[type="checkbox"] {
       }
     }
   }
-  #getNewPasswordForm {
-    display: none !important;
-  }
+  #getNewPasswordForm,
   #getCodeForm {
     display: none !important;
   }
-  .successAlert{
+  .successAlert {
     display: none !important;
     text-align: center;
-    @include display(flex,column);
+    @include display(flex, column);
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    span{
-      margin-top: -2rem;
-      @include text($fontSize-body5,center);
+    span {
+      display: block;
+      @include text($fontSize-body4, center);
     }
-    .btn-text{
+    .btn-text {
       @include btn-text($primary-yellow);
-      a{
+      font-size: $fontSize-body2;
+      margin-top: 1.5rem;
+      a {
         color: $primary-yellow;
       }
     }
@@ -148,6 +256,89 @@ input[type="checkbox"] {
   }
 }
 
+// Sign Up Form Page
+.signUpForm {
+  width: 100%;
+  @include display(flex, column);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  .row {
+    width: 100%;
+    padding-inline: 2rem;
+    @include display(flex, column);
+    gap: 1rem;
+    input[type="password"],
+    #confirmPassword {
+      outline: none;
+      border: none;
+    }
+    input[type="submit"] {
+      @include inputSubmit(
+        100%,
+        center,
+        $fontSize-body2,
+        $primary-blue,
+        $primary-yellow,
+        $primary-yellow
+      );
+    }
+    input {
+      @include input(100%);
+    }
+
+    textarea {
+      @include selectAndTextarea(100%, $fontSize-body3);
+    }
+    .inputBx {
+      @include input(100%);
+      @include display(flex, row);
+      input {
+        border: none;
+        background: none;
+      }
+    }
+  }
+}
+.signUpContainer {
+  min-width: 100%;
+  @include display(flex, column);
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  background-image: url("../assets/images/bg-small\ images/bg-signUp.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.formBottom {
+  width: 100%;
+  @include display(flex, column);
+  justify-content: center;
+  gap: 0.5rem;
+  @include text($fontSize-body4, center);
+  font-weight: 500;
+  i {
+    color: $primary-yellow;
+  }
+  a {
+    color: $primary-yellow;
+    transition: 0.4s;
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
+  }
+}
+
+.signUp.successAlert {
+  display: block !important;
+}
+.tariffTable {
+  .select {
+    width: 16rem;
+    margin-inline: auto;
+  }
+}
 /* 
 * =======x======== LOGIN | REGISTRATION | PASSWORD REPAIR PAGES =======x================================= */
 
@@ -222,6 +413,9 @@ input[type="checkbox"] {
 * =====x============== CONTACT SECTION ====x===============================================
 */
 
+/**
+*? =================================== MEADIA QUERIES ======================================================================================
+**/
 @media (min-width: 1040px) {
   /*
 * =================== CONTACT SECTION ===================================================
@@ -277,7 +471,14 @@ input[type="checkbox"] {
       }
     }
   }
-
+  .tariffTable {
+    .select {
+      width: 16rem;
+      position: absolute;
+      top: 2rem;
+      right: 0;
+    }
+  }
   /*
 * =====x============== CONTACT SECTION ====x===============================================
 */
@@ -289,13 +490,13 @@ input[type="checkbox"] {
     margin: $md-margin $lg-margin;
     @include displayGrid((28rem 30rem), unset);
     gap: 10rem;
-  }
-  .image {
-    display: block;
-    width: 30rem;
-    height: 30rem;
-    img {
-      @include img();
+    .img {
+      display: block;
+      width: 30rem;
+      height: 30rem;
+      img {
+        @include img();
+      }
     }
   }
 
@@ -303,4 +504,26 @@ input[type="checkbox"] {
     margin-top: 4rem;
     width: 30rem;
   }
+
+  // Sign Up Form Page
+  .signUpForm {
+    width: 63rem;
+    .row {
+      @include display(flex, row);
+    }
+  }
+  .signUpContainer {
+    margin: 4rem auto;
+  }
+  .formBottom {
+    @include display(flex, row);
+    justify-content: space-around;
+    @include text($fontSize-body4, left);
+  }
 }
+
+
+
+/**
+*? ===================x=============== MEADIA QUERIES ================x=====================================================================
+**/

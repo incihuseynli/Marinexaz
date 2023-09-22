@@ -1,38 +1,38 @@
-.services{
-    margin-inline: $sm-margin;
-    .cards{
-        @include displayGrid(repeat(1,1fr),unset);
-        .card{
-            width: 100%;
-            padding: 2rem 1rem;
-            box-shadow: $boxShadow1;
-            .subtitle{
-                @include subTitle(center);
-                color: $primary-blue;
-                font-size: $fontSize-body1;
-            }
-            p{
-                @include text($fontSize-body4,center);
-            }
-        }
+.services {
+  margin-inline: $sm-margin;
+  .cards {
+    @include displayGrid(repeat(1, 1fr), unset);
+    .card {
+      width: 100%;
+      padding: 2rem 1rem;
+      box-shadow: $boxShadow1;
+      .subtitle {
+        @include subTitle(center);
+        color: $primary-blue;
+        font-size: $fontSize-body1;
+      }
+      p {
+        @include text($fontSize-body4, center);
+      }
     }
+  }
 }
 
-
-
-
-
-
-
+/**
+*? ============================= MEDIA QUERIES ==================================================== 
+**/
 @media (min-width: 1040px) {
-    .services{
-    .cards{
-        @include displayGrid(repeat(2,1fr),repeat(2,1fr));
-        .card{
-            width: 34rem;
-            height: 20rem;
-        }
+  .services {
+    .cards {
+      @include displayGrid(repeat(2, 1fr), repeat(2, 1fr));
+      .card {
+        width: 34rem;
+        height: 20rem;
+      }
     }
+  }
 }
 
-}
+/**
+*? ========x==================== MEDIA QUERIES ===========x======================================== 
+**/

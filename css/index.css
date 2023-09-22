@@ -52,27 +52,34 @@ table {
   align-items: center;
   gap: 2rem;
 }
-.about .image {
+.about .img {
   width: 100%;
   height: 10rem;
 }
-.about .image img {
+.about .img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
+/**
+*? =================================== MEADIA QUERIES ======================================================================================
+**/
 @media (min-width: 1040px) {
   .about {
     margin-inline: 4rem;
   }
-  .about .image {
+  .about .img {
     width: 40rem;
     height: 20rem;
   }
 }
+/**
+*? ===================x=============== MEADIA QUERIES ================x=====================================================================
+**/
 .rules-container {
   margin-inline: 1rem;
+  padding-inline: 1rem;
 }
 .rules-container .rule-list {
   display: flex;
@@ -102,6 +109,54 @@ table {
   margin-bottom: 1rem;
 }
 
+.question {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1.5px solid #254083;
+  overflow: hidden;
+}
+.question .questionBx {
+  width: 100%;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.question .questionBx .subtitle {
+  font-size: 1rem;
+  color: #254083;
+  font-weight: 600;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+.question .questionBx i {
+  color: #ffab21;
+  transition: 0.6s;
+}
+.question .answer {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #404040;
+  line-height: 1.8;
+  letter-spacing: 0.125rem;
+  text-align: left;
+  transition: 0.6s;
+  padding: 0 0.5rem;
+  height: 0;
+}
+.question.open .answer {
+  margin-bottom: 1rem;
+}
+
+/**
+*? ============================= MEDIA QUERIES ==================================================== 
+**/
 @media (min-width: 1040px) {
   .rules-container {
     margin-inline: 4rem;
@@ -115,6 +170,9 @@ table {
     text-align: left;
   }
 }
+/**
+*? =============x=============== MEDIA QUERIES =================x================================== 
+**/
 .services {
   margin-inline: 1rem;
 }
@@ -147,6 +205,9 @@ table {
   text-align: center;
 }
 
+/**
+*? ============================= MEDIA QUERIES ==================================================== 
+**/
 @media (min-width: 1040px) {
   .services .cards {
     display: grid;
@@ -159,6 +220,9 @@ table {
     height: 20rem;
   }
 }
+/**
+*? ========x==================== MEDIA QUERIES ===========x======================================== 
+**/
 .news-post {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -195,19 +259,22 @@ table {
   letter-spacing: 0.125rem;
   text-align: left;
 }
-.news-post .image {
+.news-post .img {
   width: 100%;
   height: 100%;
   border-radius: 0.625rem;
   order: 1;
 }
-.news-post .image img {
+.news-post .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0.625rem;
 }
 
+/**
+*? ============================= MEDIA QUERIES ==================================================== 
+**/
 @media (min-width: 1040px) {
   .news-post {
     margin-inline: 4rem;
@@ -215,7 +282,6 @@ table {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: unset;
     align-items: center;
-    align-items: flex-start;
   }
   .news-post .content {
     width: 47rem;
@@ -226,12 +292,15 @@ table {
   .news-post .content .title {
     text-align: left;
   }
-  .news-post .image {
+  .news-post .img {
     width: 28rem;
     height: 26rem;
     order: 2;
   }
 }
+/**
+*? =============x=============== MEDIA QUERIES =======================x============================ 
+**/
 .store-list .list {
   margin: 2rem;
   display: grid;
@@ -279,11 +348,10 @@ input {
   font-weight: 500;
 }
 
-select,
 textarea {
   width: 100%;
   border: 2px solid #254083;
-  border-radius: 0.625rem;
+  border-radius: 1rem;
   padding: 1.5rem;
   appearance: none;
   resize: none;
@@ -292,6 +360,118 @@ textarea {
   color: #404040;
   letter-spacing: 0.03rem;
   background: #ffffff;
+}
+
+.select {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  align-items: flex-start;
+  position: relative;
+}
+.select .select-header {
+  width: 100%;
+  border: 2px solid #254083;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  appearance: none;
+  resize: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #404040;
+  letter-spacing: 0.03rem;
+  background: #ffffff;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.select .select-header i {
+  transition: 0.6s;
+}
+.select .options {
+  position: absolute;
+  top: 4rem;
+  z-index: 3;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  align-items: flex-start;
+  transition: 0.6s linear;
+}
+.select .options .option {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #404040;
+  line-height: 1.8;
+  letter-spacing: 0.125rem;
+  text-align: left;
+  cursor: pointer;
+}
+.select .options .option:first-child {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.select .options .option:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.select .options .option:hover {
+  background: rgba(255, 171, 33, 0.8);
+  color: #ffffff;
+}
+.select #cityOptions {
+  height: 11rem;
+  overflow-y: scroll;
+}
+.select #cityOptions::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+.select #cityOptions::-webkit-scrollbar-track {
+  background: #e3e3e3;
+}
+.select #cityOptions::-webkit-scrollbar-thumb {
+  background-color: #ffab21;
+  border-radius: 0.5rem;
+}
+.select #cityOptions .option:first-child {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 0;
+}
+.select #cityOptions .option:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 0;
+}
+.select.active .options {
+  display: flex;
+}
+.select.active i {
+  transform: rotate(180deg);
+}
+
+.operatorID {
+  width: 10rem;
+}
+.operatorID .select-header {
+  border-left: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#telNumber {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 input[type=submit] {
@@ -319,6 +499,18 @@ input[type=submit]:hover {
   outline-color: #ffab21;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 input[type=checkbox] {
   width: 1rem;
   height: 1rem;
@@ -332,6 +524,9 @@ input[type=checkbox] {
 * ================ LOGIN | REGISTRATION | PASSWORD REPAIR PAGES ====================================== */
 .formPage {
   margin: 2rem 1rem;
+}
+.formPage .img {
+  display: none;
 }
 
 .image {
@@ -384,9 +579,7 @@ input[type=checkbox] {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
-.formContainer #getNewPasswordForm {
-  display: none !important;
-}
+.formContainer #getNewPasswordForm,
 .formContainer #getCodeForm {
   display: none !important;
 }
@@ -401,8 +594,8 @@ input[type=checkbox] {
   gap: 1rem;
 }
 .formContainer .successAlert span {
-  margin-top: -2rem;
-  font-size: 0.625rem;
+  display: block;
+  font-size: 0.75rem;
   font-weight: 400;
   color: #404040;
   line-height: 1.8;
@@ -415,6 +608,8 @@ input[type=checkbox] {
   background: none;
   text-align: center;
   cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
 }
 .formContainer .successAlert .btn-text a {
   color: #ffab21;
@@ -474,6 +669,132 @@ input[type=checkbox] {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
+}
+
+.signUpForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.signUpForm .row {
+  width: 100%;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.signUpForm .row input[type=password],
+.signUpForm .row #confirmPassword {
+  outline: none;
+  border: none;
+}
+.signUpForm .row input[type=submit] {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #254083;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.signUpForm .row input[type=submit]:hover {
+  background-color: #ffab21;
+  border-color: #ffab21;
+}
+.signUpForm .row input {
+  width: 100%;
+  height: 3rem;
+  border: 2px solid #254083;
+  border-radius: 1rem;
+  padding-inline: 1.5rem;
+  font-size: 1rem;
+  color: #404040;
+  font-weight: 500;
+}
+.signUpForm .row textarea {
+  width: 100%;
+  border: 2px solid #254083;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  appearance: none;
+  resize: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #404040;
+  letter-spacing: 0.03rem;
+  background: #ffffff;
+}
+.signUpForm .row .inputBx {
+  width: 100%;
+  height: 3rem;
+  border: 2px solid #254083;
+  border-radius: 1rem;
+  padding-inline: 1.5rem;
+  font-size: 1rem;
+  color: #404040;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.signUpForm .row .inputBx input {
+  border: none;
+  background: none;
+}
+
+.signUpContainer {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  background-image: url("../assets/images/bg-small images/bg-signUp.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.formBottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #404040;
+  line-height: 1.8;
+  letter-spacing: 0.125rem;
+  text-align: center;
+  font-weight: 500;
+}
+.formBottom i {
+  color: #ffab21;
+}
+.formBottom a {
+  color: #ffab21;
+  transition: 0.4s;
+}
+.formBottom a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.signUp.successAlert {
+  display: block !important;
+}
+
+.tariffTable .select {
+  width: 16rem;
+  margin-inline: auto;
 }
 
 /* 
@@ -574,6 +895,9 @@ input[type=checkbox] {
 /*
 * =====x============== CONTACT SECTION ====x===============================================
 */
+/**
+*? =================================== MEADIA QUERIES ======================================================================================
+**/
 @media (min-width: 1040px) {
   /*
   * =================== CONTACT SECTION ===================================================
@@ -652,6 +976,12 @@ input[type=checkbox] {
   .contact .form .contactForm input[type=submit] {
     width: 34rem;
   }
+  .tariffTable .select {
+    width: 16rem;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+  }
   /*
   * =====x============== CONTACT SECTION ====x===============================================
   */
@@ -665,12 +995,12 @@ input[type=checkbox] {
     align-items: center;
     gap: 10rem;
   }
-  .image {
+  .formPage .img {
     display: block;
     width: 30rem;
     height: 30rem;
   }
-  .image img {
+  .formPage .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -680,7 +1010,417 @@ input[type=checkbox] {
     margin-top: 4rem;
     width: 30rem;
   }
+  .signUpForm {
+    width: 63rem;
+  }
+  .signUpForm .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .signUpContainer {
+    margin: 4rem auto;
+  }
+  .formBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #404040;
+    line-height: 1.8;
+    letter-spacing: 0.125rem;
+    text-align: left;
+  }
 }
+/**
+*? ===================x=============== MEADIA QUERIES ================x=====================================================================
+**/
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: unset;
+  align-items: center;
+  margin: 1rem;
+}
+.gridContainer .img {
+  display: none;
+}
+.gridContainer .content {
+  gap: 0.5rem;
+}
+.gridContainer .content .title {
+  margin-bottom: 0;
+  text-align: center;
+}
+.gridContainer .content p {
+  width: 85%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.gridContainer .content .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.gridContainer .content .form .row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.gridContainer .content .form .row select {
+  padding: 1rem;
+}
+.gridContainer .content .form .result {
+  background: #254083;
+  color: #ffffff;
+}
+.gridContainer .content .form .result::placeholder {
+  color: #ffffff;
+  font-weight: 600;
+}
+.gridContainer .content .form input[type=submit] {
+  background: #ffab21;
+  border-color: #ffab21;
+}
+.gridContainer .content .form input[type=submit]:hover {
+  background: #254083;
+  border-color: #254083;
+}
+
+.tariffTable {
+  margin: 6rem 1rem 4rem;
+  position: relative;
+}
+.tariffTable .chooseCountry {
+  width: 16rem;
+  padding: 0.8rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.tariffTable .table {
+  margin-top: 6rem;
+  display: none;
+}
+
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.table .head {
+  width: 100%;
+  padding-left: 12rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+.table .head p {
+  padding-left: 1rem;
+  font-size: 0.875rem;
+}
+.table .sort {
+  width: 100%;
+  height: 5rem;
+  background: #ffffff;
+  border-radius: 0.625rem;
+  padding-inline: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  box-shadow: 0px 2px 7px 0px rgba(138, 138, 138, 0.25);
+}
+.table .sort .subtitle {
+  width: 6rem;
+  font-size: 1rem;
+  color: #254083;
+  font-weight: 600;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+.table .sort .row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.table .sort .row p {
+  width: 100%;
+  text-align: center;
+}
+
+/** 
+* ? ================================== Media Queries ==================================
+**/
+@media (min-width: 1040px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+    align-items: center;
+    margin: 4rem 4rem 8rem;
+  }
+  .gridContainer .img {
+    display: block;
+  }
+  .gridContainer .content {
+    align-items: flex-start;
+  }
+  .gridContainer .content .title {
+    text-align: left;
+  }
+  .gridContainer .content p {
+    text-align: left;
+  }
+  .gridContainer .content .form .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .tariffTable {
+    margin: 6rem 4rem 4rem;
+    position: relative;
+  }
+  .tariffTable .price-list {
+    display: none;
+  }
+  .tariffTable .chooseCountry {
+    width: 16rem;
+    padding: 0.8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .tariffTable .table {
+    margin-top: 6rem;
+    display: block;
+  }
+  .table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .table .head {
+    width: 100%;
+    padding-left: 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+  .table .head p {
+    padding-left: 1rem;
+    font-size: 0.875rem;
+  }
+  .table .sort {
+    width: 100%;
+    height: 5rem;
+    background: #ffffff;
+    border-radius: 0.625rem;
+    padding-inline: 2.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    box-shadow: 0px 2px 7px 0px rgba(138, 138, 138, 0.25);
+  }
+  .table .sort .subtitle {
+    width: 6rem;
+    font-size: 1rem;
+    color: #254083;
+    font-weight: 600;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+  }
+  .table .sort .row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .table .sort .row p {
+    width: 100%;
+    text-align: center;
+  }
+}
+/** 
+* ? ==============x=================== Media Queries ===================x==============
+**/
+.hero-slider {
+  margin-top: 0rem;
+  background: linear-gradient(180deg, #ffffff, rgba(0, 91, 127, 0.6));
+  z-index: 1;
+}
+
+.swiper-slide .slider-card {
+  width: 100%;
+  height: 20rem;
+  padding-inline: 1rem;
+}
+.swiper-slide .slider-card .slider-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  margin-top: 4rem;
+}
+.swiper-slide .slider-card .slider-info .title {
+  font-size: 2rem;
+  color: #ffffff;
+  width: 26rem;
+  text-align: left;
+}
+.swiper-slide .slider-card .slider-info p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #404040;
+  line-height: 1.8;
+  letter-spacing: 0.125rem;
+  text-align: left;
+}
+.swiper-slide .slider-card .slider-image {
+  display: none;
+}
+
+.swiper-pagination {
+  text-align: left;
+  margin-left: 4rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffab21;
+  width: 1.5rem;
+  border-radius: 0.625rem;
+}
+
+/**
+*? =============================== Media Queries ======================================
+**/
+@media (min-width: 1040px) {
+  .hero-slider {
+    width: 100%;
+    margin-top: -3rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+  }
+  .swiper-slide .slider-card {
+    height: 100%;
+    padding-inline: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+    align-items: center;
+  }
+  .swiper-slide .slider-card .slider-info {
+    margin-top: -5rem;
+  }
+  .swiper-slide .slider-card .slider-info .title {
+    font-size: 3rem;
+  }
+  .swiper-slide .slider-card .slider-info p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #404040;
+    line-height: 1.8;
+    letter-spacing: 0.125rem;
+    text-align: left;
+  }
+  .swiper-slide .slider-card .slider-image {
+    display: block;
+  }
+}
+/**
+*? ================x============== Media Queries =====================x================
+**/
+.places {
+  margin-inline: 1rem;
+}
+.places .tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.places .tabs .tab-btn {
+  width: 16rem;
+  background: #ffffff;
+  border: 2px solid #254083;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #404040;
+  line-height: 1.8;
+  letter-spacing: 0.125rem;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.6s ease-in-out;
+}
+.places .tabs .tab-btn.active {
+  background: #254083;
+  color: #ffffff;
+}
+.places .contents .content {
+  display: none;
+  transition: 0.6s ease-in-out;
+}
+.places .contents .content.active {
+  display: block;
+}
+.places .contents .content .tariffTable {
+  margin: 0;
+}
+
+/**
+*? =================================== MEADIA QUERIES ======================================================================================
+**/
+@media (min-width: 1040px) {
+  .places {
+    margin-inline: 4rem;
+  }
+  .places .tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .places .tabs .tab-btn {
+    width: 100%;
+  }
+}
+/**
+*? ===================x=============== MEADIA QUERIES ================x=====================================================================
+**/
+/* 
+* ====================================START HERE=====================================================================*/
 html {
   scroll-behavior: smooth;
 }
@@ -828,6 +1568,7 @@ header .menu {
   justify-content: space-between;
   transform: translateX(-200%);
   transition: transform 0.6s;
+  z-index: 2;
 }
 header .menu .nav-top {
   display: flex;
@@ -922,6 +1663,71 @@ header .menu .socials i:hover {
 /**
 * !     ----------------  Main Section  -----------------------------------
 **/
+.price-list {
+  padding: 4rem 1rem;
+  background-image: url("../assets/images/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.table-Container {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.table-Container .header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 0;
+}
+.table-Container .header h5 {
+  width: 5rem;
+  font-size: 1rem;
+  color: #254083;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.table-Container .body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.table-Container .body .col {
+  width: 100%;
+}
+.table-Container .body .col .row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 171, 33, 0.2);
+  padding: 0.5rem 0;
+}
+.table-Container .body .col .row:last-child {
+  border: none;
+}
+.table-Container .body .col .row:hover {
+  background-color: rgba(255, 171, 33, 0.3);
+}
+.table-Container .body .col .row p {
+  width: 5rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
 .usage {
   margin-inline: 1rem;
 }
@@ -941,11 +1747,11 @@ header .menu .socials i:hover {
   gap: 1.5rem;
   text-align: center;
 }
-.usage .container .step .image {
+.usage .container .step .img {
   width: 15rem;
   height: 14rem;
 }
-.usage .container .step .image img {
+.usage .container .step .img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -1258,19 +2064,23 @@ footer .bottom p {
 }
 
 .tabcontent {
-  width: 64rem;
-  margin-inline: auto;
+  width: 100%;
+  margin: 4rem 0;
+  padding-inline: 1rem;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 .tabcontent p {
-  margin-top: 1.5rem;
   font-size: 0.875rem;
   font-weight: 400;
   color: #404040;
   line-height: 1.8;
   letter-spacing: 0.125rem;
-  text-align: left;
+  text-align: center;
 }
 
 /* Fade in tabs */
@@ -1309,8 +2119,8 @@ footer .bottom p {
   gap: 0.5rem;
 }
 .paginations .pagination li {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   border: 1px solid inherit;
   background-color: #e3e3e3;
@@ -1318,6 +2128,15 @@ footer .bottom p {
 }
 .paginations .pagination li.active {
   background-color: #ffab21;
+}
+
+.page-number {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid inherit;
+  background-color: #e3e3e3;
+  cursor: pointer;
 }
 
 .country {
@@ -1427,40 +2246,6 @@ footer .bottom p {
   /**
   * !      --------------  Main Section  ---------------------------------
   **/
-  .price-list {
-    padding: 3rem 4rem;
-    background-image: url("../assets/images/bg.png");
-  }
-  .price-list .container {
-    width: 100%;
-    height: 34rem;
-    background: #fafafa;
-    border-radius: 0.625rem;
-    padding: 3rem 0;
-  }
-  .price-list .container table {
-    width: 100%;
-    padding-inline: 2rem;
-  }
-  .price-list .container table thead th {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #254083;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    width: 12rem;
-  }
-  .price-list .container table tbody {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-items: flex-end;
-    text-align: right;
-  }
-  .price-list .container table tbody tr td {
-    width: 12rem !important;
-    text-align: right;
-  }
   .usage {
     margin-inline: 4rem;
   }
@@ -1581,6 +2366,31 @@ footer .bottom p {
     flex-direction: row;
     align-items: center;
   }
+  .tabcontent {
+    width: 64rem;
+    margin: 4rem auto;
+  }
+  .tabcontent p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #404040;
+    line-height: 1.8;
+    letter-spacing: 0.125rem;
+    text-align: left;
+  }
+  .price-list {
+    padding: 4rem;
+  }
+  .table-Container {
+    padding: 3rem 6rem;
+  }
+  .table-Container .header h5 {
+    width: 10rem;
+    font-size: 1.25rem;
+  }
+  .table-Container .body .col .row p {
+    width: 10rem;
+  }
   /**
   * * ==================x==============================================x==============
   **/
@@ -1589,3 +2399,5 @@ footer .bottom p {
 /**
 * ? ================x========== MEADIA QUERIES ======================x=============================================================================== 
 **/
+/* 
+* ====================================END HERE=====================================================================*/
