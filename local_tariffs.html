@@ -131,59 +131,44 @@
       <section class="places">
         <h1 class="title">Məntəqə tarifləri</h1>
         <div class="tabs">
-          <button class="tab-btn">Bərdə</button>
-          <button class="tab-btn">Tərtər</button>
-          <button class="tab-btn">Mingəcevir</button>
-          <button class="tab-btn">Ağcabədi</button>
-          <button class="tab-btn">Gəncə</button>
-          <button class="tab-btn">Lənkaran</button>
-          <button class="tab-btn">Xırdalan</button>
-          <button class="tab-btn">Sumqayıt</button>
-          <button class="tab-btn">Şəki</button>
-          <button class="tab-btn">Balakən</button>
-          <button class="tab-btn">Qəbələ</button>
-          <button class="tab-btn">Beylaqan</button>
+          <button onclick="tabClick(event)" id="Bərdə" class="tab-btn">
+            Bərdə
+          </button>
+          <button onclick="tabClick(event)" id="Tərtər" class="tab-btn">
+            Tərtər
+          </button>
+          <button onclick="tabClick(event)" id="Mingəcevir" class="tab-btn">
+            Mingəcevir
+          </button>
+          <button onclick="tabClick(event)" id="Ağcabədi" class="tab-btn">
+            Ağcabədi
+          </button>
+          <button onclick="tabClick(event)" id="Gəncə" class="tab-btn">
+            Gəncə
+          </button>
+          <button onclick="tabClick(event)" id="Lənkaran" class="tab-btn">
+            Lənkaran
+          </button>
+          <button onclick="tabClick(event)" id="Xırdalan" class="tab-btn">
+            Xırdalan
+          </button>
+          <button onclick="tabClick(event)" id="Sumqayıt" class="tab-btn">
+            Sumqayıt
+          </button>
+          <button onclick="tabClick(event)" id="Şəki" class="tab-btn">
+            Şəki
+          </button>
+          <button onclick="tabClick(event)" id="Balakən" class="tab-btn">
+            Balakən
+          </button>
+          <button onclick="tabClick(event)" id="Qəbələ" class="tab-btn">
+            Qəbələ
+          </button>
+          <button onclick="tabClick(event)" id="Beylaqan" class="tab-btn">
+            Beylaqan
+          </button>
         </div>
-        <div class="contents">
-          <!-- 
-            <div class="content">
-            <div class="tariffTable">
-              <div class="table">
-                <div class="head">
-                  <p>0.00 kg - 0.10 kg</p>
-                  <p>0.10 kg - 0.25 kg</p>
-                  <p>0.25 kg - 0.50 kg</p>
-                  <p>0.50 kg - 0.75 kg</p>
-                  <p>0.75 kg - 1.00 kg</p>
-                  <p>1.00 kg və üzəri</p>
-                </div>
-                <div class="sort">
-                  <h4 class="subtitle">Adi məhsul</h4>
-                  <div class="row">
-                    <p>0.75 USD</p>
-                    <p>1.00 USD</p>
-                    <p>2.50 USD</p>
-                    <p>3.50 USD</p>
-                    <p>4.00 USD</p>
-                    <p>kg / 3.00 USD</p>
-                  </div>
-                </div>
-                <div class="sort">
-                  <h4 class="subtitle">Maye</h4>
-                  <div class="row">
-                    <p>0.75 USD</p>
-                    <p>1.00 USD</p>
-                    <p>2.50 USD</p>
-                    <p>3.50 USD</p>
-                    <p>4.00 USD</p>
-                    <p>kg / 3.00 USD</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          -->
-        </div>
+        <div class="contents"></div>
       </section>
     </main>
     <!-- ! ----x--- Main Section -----------x------------ -->
@@ -236,7 +221,7 @@
     <!-- ! ----x--- Footer Section -----------x------------ -->
 
     <!-- !--------------- JavaScript Files ------------------------------------------------ -->
-    <script src="./js/local_tariffs.js"></script>
+    <script defer src="./js/local_tariffs.js"></script>
     <script src="./js/mobileMenu.js"></script>
   </body>
 </html>

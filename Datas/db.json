@@ -4,161 +4,49 @@
       "id": 1,
       "tariff": "0.00 kg - 0.10 kg",
       "forStandards": "0.75 USD",
-      "forLiquids": "0.75 USD",
-      "places": [
-        "Bərdə",
-        "Tərtər",
-        "Mingəcevir",
-        "Ağcabədi",
-        "Gəncə",
-        "Lənkaran",
-        "Xırdalan",
-        "Sumqayıt",
-        "Şəki",
-        "Balakən",
-        "Qəbələ",
-        "Beylaqan"
-      ]
+      "forLiquids": "0.75 USD"
     },
     {
       "id": 2,
       "tariff": "0.10 kg - 0.25 kg",
       "forStandards": "1.00 USD",
-      "forLiquids": "1.00 USD",
-      "places": [
-        "Bərdə",
-        "Tərtər",
-        "Mingəcevir",
-        "Ağcabədi",
-        "Gəncə",
-        "Lənkaran",
-        "Xırdalan",
-        "Sumqayıt",
-        "Şəki",
-        "Balakən",
-        "Qəbələ",
-        "Beylaqan"
-      ]
+      "forLiquids": "1.00 USD"
     },
     {
       "id": 3,
       "tariff": "0.25 kg - 0.50 kg",
       "forStandards": "2.50 USD",
-      "forLiquids": "2.50 USD",
-      "places": [
-        "Bərdə",
-        "Tərtər",
-        "Mingəcevir",
-        "Ağcabədi",
-        "Gəncə",
-        "Lənkaran",
-        "Xırdalan",
-        "Sumqayıt",
-        "Şəki",
-        "Balakən",
-        "Qəbələ",
-        "Beylaqan"
-      ]
+      "forLiquids": "2.50 USD"
     },
     {
       "id": 4,
       "tariff": "0.50 kg - 0.75 kg",
       "forStandards": "3.50 USD",
-      "forLiquids": "3.50 USD",
-      "places": [
-        "Bərdə",
-        "Tərtər",
-        "Mingəcevir",
-        "Ağcabədi",
-        "Gəncə",
-        "Lənkaran",
-        "Xırdalan",
-        "Sumqayıt",
-        "Şəki",
-        "Balakən",
-        "Qəbələ",
-        "Beylaqan"
-      ]
+      "forLiquids": "3.50 USD"
     },
     {
       "id": 5,
       "tariff": "0.75 kg - 1.00 kg",
       "forStandards": "4.00 USD",
-      "forLiquids": "4.00 USD",
-      "places": [
-        "Bərdə",
-        "Tərtər",
-        "Mingəcevir",
-        "Ağcabədi",
-        "Gəncə",
-        "Lənkaran",
-        "Xırdalan",
-        "Sumqayıt",
-        "Şəki",
-        "Balakən",
-        "Qəbələ",
-        "Beylaqan"
-      ]
+      "forLiquids": "4.00 USD"
     },
     {
       "id": 6,
       "tariff": "1.00 kg - 5.00 kg",
       "forStandards": "kg / 4.00 USD",
-      "forLiquids": "kg / 4.00 USD",
-      "places": [
-        "Bərdə",
-        "Tərtər",
-        "Mingəcevir",
-        "Ağcabədi",
-        "Gəncə",
-        "Lənkaran",
-        "Xırdalan",
-        "Sumqayıt",
-        "Şəki",
-        "Balakən",
-        "Qəbələ",
-        "Beylaqan"
-      ]
+      "forLiquids": "kg / 4.00 USD"
     },
     {
       "id": 7,
       "tariff": "5.00 kg - 10.00 kg",
       "forStandards": "kg / 3.50 USD",
-      "forLiquids": "kg / 3.50 USD",
-      "places": [
-        "Bərdə",
-        "Tərtər",
-        "Mingəcevir",
-        "Ağcabədi",
-        "Gəncə",
-        "Lənkaran",
-        "Xırdalan",
-        "Sumqayıt",
-        "Şəki",
-        "Balakən",
-        "Qəbələ",
-        "Beylaqan"
-      ]
+      "forLiquids": "kg / 3.50 USD"
     },
     {
       "id": 8,
       "tariff": "10.00 kg və üzəri",
       "forStandards": "kg / 3.00 USD",
-      "forLiquids": "kg / 3.00 USD",
-      "places": [
-        "Bərdə",
-        "Tərtər",
-        "Mingəcevir",
-        "Ağcabədi",
-        "Gəncə",
-        "Lənkaran",
-        "Xırdalan",
-        "Sumqayıt",
-        "Şəki",
-        "Balakən",
-        "Qəbələ",
-        "Beylaqan"
-      ]
+      "forLiquids": "kg / 3.00 USD"
     }
   ],
   "news": [
@@ -167,7 +55,7 @@
       "title": "Smart Customs-da bəyan et",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "18.05.2021",
-      "day" : "18",
+      "day": "18",
       "months": "May",
       "image": "./assets/images/image25.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -177,7 +65,7 @@
       "title": "Bağlamanızı e.customs.gov.az və ya Smart Customs ilə bəyan edin!",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image27.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -187,7 +75,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "18.05.2021",
-      "day" : "18",
+      "day": "18",
       "months": "May",
       "image": "./assets/images/image27.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -197,7 +85,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image27.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -207,7 +95,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image27.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -217,7 +105,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image28.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -227,7 +115,7 @@
       "title": "Bağlamanızı e.customs.gov.az və ya Smart Customs ilə bəyan edin!",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image27.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -237,7 +125,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "18.05.2021",
-      "day" : "18",
+      "day": "18",
       "months": "May",
       "image": "./assets/images/image27.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -247,7 +135,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image27.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -257,7 +145,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image27.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -267,7 +155,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image28.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -277,7 +165,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image28.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -287,7 +175,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image28.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -297,7 +185,7 @@
       "title": "300 USD limit necə hesablanır?",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
       "date": "21.02.2021",
-      "day" : "21",
+      "day": "21",
       "months": "Fevral",
       "image": "./assets/images/image28.png",
       "detailedContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -306,7 +194,7 @@
   "about": [
     {
       "title": "Biz kimik?",
-      "image" : "./assets/images/Banners/image3.png",
+      "image": "./assets/images/Banners/image3.png",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     }
   ],
@@ -534,77 +422,293 @@
   "places": [
     {
       "id": "Bərdə",
-      "place": "Bərdə"
+      "place": "Bərdə",
+      "tariffs": {
+        "adi": [
+          "1.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "3.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Tərtər",
-      "place": "Tərtər"
+      "place": "Tərtər",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Mingəcevir",
-      "place": "Mingəcevir"
+      "place": "Mingəcevir",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Ağcabədi",
-      "place": "Ağcabədi"
+      "place": "Ağcabədi",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Gəncə",
-      "place": "Gəncə"
+      "place": "Gəncə",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Lənkaran",
-      "place": "Lənkaran"
+      "place": "Lənkaran",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Xırdalan",
-      "place": "Xırdalan"
+      "place": "Xırdalan",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Sumqayıt",
-      "place": "Sumqayıt"
+      "place": "Sumqayıt",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Şəki",
-      "place": "Şəki"
+      "place": "Şəki",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Balakən",
-      "place": "Balakən"
+      "place": "Balakən",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Qəbələ",
-      "place": "Qəbələ"
+      "place": "Qəbələ",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     },
     {
       "id": "Balakən",
-      "place": "Balakən"
+      "place": "Balakən",
+      "tariffs": {
+        "adi": [
+          "0.95 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ],
+        "maye": [
+          "0.75 USD",
+          "1.00 USD",
+          "2.50 USD",
+          "3.50 USD",
+          "4.00 USD",
+          "kg / 3.00 USD"
+        ]
+      }
     }
   ],
-  "sliders" : [
+  "sliders": [
     {
       "id": 1,
       "title": "Keyfiyyətli xidmət bizimlə!",
-      "text" : "Məhsulunuzu seçin, sizin üçün biz gətirək",
-      "image" : "./assets/images/Banners/image7.png"
+      "text": "Məhsulunuzu seçin, sizin üçün biz gətirək",
+      "image": "./assets/images/Banners/image7.png"
     },
     {
       "id": 2,
       "title": "Keyfiyyətli xidmət bizimlə!",
-      "text" : "Məhsulunuzu seçin, sizin üçün biz gətirək",
-      "image" : "./assets/images/Banners/image7.png"
+      "text": "Məhsulunuzu seçin, sizin üçün biz gətirək",
+      "image": "./assets/images/Banners/image7.png"
     },
     {
       "id": 3,
       "title": "Keyfiyyətli xidmət bizimlə!",
-      "text" : "Məhsulunuzu seçin, sizin üçün biz gətirək",
-      "image" : "./assets/images/Banners/image7.png"
+      "text": "Məhsulunuzu seçin, sizin üçün biz gətirək",
+      "image": "./assets/images/Banners/image7.png"
     },
     {
       "id": 4,
       "title": "Keyfiyyətli xidmət bizimlə!",
-      "text" : "Məhsulunuzu seçin, sizin üçün biz gətirək",
-      "image" : "./assets/images/Banners/image7.png"
+      "text": "Məhsulunuzu seçin, sizin üçün biz gətirək",
+      "image": "./assets/images/Banners/image7.png"
     }
   ]
 }
