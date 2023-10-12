@@ -1,6 +1,7 @@
 let limit = 6;
 let currentPage = 1;
-const NEWS_URL = `http://localhost:3001/news?_limit=${limit}`;
+// const NEWS_URL = `http://localhost:3001/news?_limit=${limit}`;
+const NEWS_URL = `https://my-json-server.typicode.com/incihuseynli/MarinexData4/news?_limit=${limit}`;
 
 const newsCards = document.querySelector(".cards");
 

@@ -1,4 +1,5 @@
-const STORE_URL = "http://localhost:3001/brands";
+// const STORE_URL = "http://localhost:3001/brands";
+const STORE_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/brands";
 
 const storesList = document.querySelector(".list");
 const storesBanner = document.querySelector(".stores");

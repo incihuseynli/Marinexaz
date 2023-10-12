@@ -1,6 +1,7 @@
 
 // PRICE TABLE
-const SHIPPING_PRICES_URL = "http://localhost:3001/shippingPrices";
+// const SHIPPING_PRICES_URL = "http://localhost:3001/shippingPrices";
+const SHIPPING_PRICES_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/shippingPrices";
 
 const tableContainer = document.querySelector(".table-Container .body .col");
 
@@ -24,7 +25,8 @@ fetch(SHIPPING_PRICES_URL)
   // USAGE SECTION
 const usageContainer = document.querySelector(".container");
 
-const USAGE_URL = "http://localhost:3001/work";
+// const USAGE_URL = "http://localhost:3001/work";
+const USAGE_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData3/work";
 
 fetch(USAGE_URL)
   .then((response) => {
@@ -47,7 +49,8 @@ fetch(USAGE_URL)
 
   const newsCards = document.querySelector(".cards");
   
-  const NEWS_URL = "http://localhost:3001/news?&_limit=3";
+  // const NEWS_URL = "http://localhost:3001/news?&_limit=3";
+  const NEWS_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData4/news?&_limit=3";
 
   fetch(NEWS_URL)
   .then((response) => {

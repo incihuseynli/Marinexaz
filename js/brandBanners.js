@@ -1,4 +1,5 @@
-const STORE_URL = "http://localhost:3001/brands?&_limit=8";
+// const STORE_URL = "http://localhost:3001/brands?&_limit=8";
+const STORE_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/brands?&_limit=8";
 
 const storesBanner = document.querySelector(".stores");
 fetch(STORE_URL)

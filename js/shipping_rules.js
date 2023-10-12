@@ -1,4 +1,5 @@
-const SHIPPING_RULES_URL = "http://localhost:3001/shippingRules";
+// const SHIPPING_RULES_URL = "http://localhost:3001/shippingRules";
+const SHIPPING_RULES_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData2/shippingRules";
 
 const rulesList = document.querySelector(".list");
 fetch(SHIPPING_RULES_URL)
@@ -33,9 +34,12 @@ const forbiddenTabContent = document.getElementById("forbidden");
 const privacyTabContent = document.getElementById("privacy");
 const faqTabContent = document.getElementById("faq");
 
-const FORBIDDENS_URL = "http://localhost:3001/forbiddens";
-const PRIVACY_URL = "http://localhost:3001/privacy";
-const FAQ_URL = "http://localhost:3001/faqs";
+// const FORBIDDENS_URL = "http://localhost:3001/forbiddens";
+// const PRIVACY_URL = "http://localhost:3001/privacy";
+// const FAQ_URL = "http://localhost:3001/faqs";
+const FORBIDDENS_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/forbiddens";
+const PRIVACY_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData3/privacy";
+const FAQ_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData3/faqs";
 
 fetch(FORBIDDENS_URL)
   .then((response) => {

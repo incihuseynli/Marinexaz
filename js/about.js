@@ -1,4 +1,5 @@
-const ABOUT_URL = "http://localhost:3001/about";
+// const ABOUT_URL = "http://localhost:3001/about";
+const ABOUT_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/about";
 const aboutContainer = document.querySelector(".about");
 fetch(ABOUT_URL)
 .then((response) => {
