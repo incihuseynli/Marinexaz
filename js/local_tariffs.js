@@ -53,4 +53,5 @@ function tabClick(e) {
   });
   document.getElementById(`${e.target.id}-content`).classList.add("active");
   e.target.classList.add("active");
+  console.log(document.getElementById(`${e.target.id}-content`));
 }
