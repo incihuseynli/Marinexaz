@@ -3,8 +3,8 @@ const newsPostContainer = document.querySelector(".news-post");
 async function DisplayNewsDetails() {
   const NEWS_URL = new URLSearchParams(document.location.search);
   let id = NEWS_URL.get("id");
-  // let res = await fetch(`http://localhost:3001/news/${id}`);
-  let res = await fetch(`https://my-json-server.typicode.com/incihuseynli/MarinexData4/news/${id}`);
+  let res = await fetch( 
+    `https://my-json-server.typicode.com/dbStoreForProjects/MarinexData4/news/${id}`);
   let newsPost = await res.json();
 
   newsPostContainer.innerHTML += `

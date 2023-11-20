@@ -20,8 +20,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// const SLIDER_URL = "http://localhost:3001/sliders";
-const SLIDER_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData3/sliders";
+const SLIDER_URL = "https://my-json-server.typicode.com/dbStoreForProjects/MarinexData3/sliders";
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 fetch(SLIDER_URL)
   .then((response) => {

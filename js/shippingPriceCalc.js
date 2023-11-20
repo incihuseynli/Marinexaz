@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // console.log(productLengthValue);
     // console.log(productWeightValue);
     if (productWeightValue > 0 && productWeightValue <= 100) {
-      // const URL = "http://localhost:3001/shippingPrices";
-      const URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/shippingPrices";
+      const URL = 
+      "https://my-json-server.typicode.com/dbStoreForProjects/MarinexData1/shippingPrices";
       fetch(URL)
         .then((response) => {
           return response.json();

@@ -1,5 +1,4 @@
-// const STORE_URL = "http://localhost:3001/brands";
-const STORE_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/brands";
+const STORE_URL = "https://my-json-server.typicode.com/dbStoreForProjects/MarinexData1/brands";
 
 const storesList = document.querySelector(".list");
 const storesBanner = document.querySelector(".stores");
@@ -18,9 +17,4 @@ fetch(STORE_URL)
     });
   });
 
-// const storeLists = document.querySelector(".list");
-// const stores = document.querySelectorAll(".store");
-
-// let currentPage = 1;
-// let limit = 12;
 

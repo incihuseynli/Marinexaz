@@ -1,5 +1,5 @@
-// const SHIPPING_PRICES_URL = "http://localhost:3001/shippingPrices?&_limit=6";
-const SHIPPING_PRICES_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/shippingPrices?&_limit=6";
+const SHIPPING_PRICES_URL =
+  "https://my-json-server.typicode.com/dbStoreForProjects/MarinexData1/shippingPrices?&_limit=6";
 
 const tableHead = document.querySelector(".head");
 const pricesRows = document.querySelectorAll(".sort .row");
@@ -16,10 +16,9 @@ fetch(SHIPPING_PRICES_URL)
     });
   });
 
-
-  // PRICE TABLE
-// const PRICES_URL = "http://localhost:3001/shippingPrices";
-const PRICES_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/shippingPrices";
+// PRICE TABLE
+const PRICES_URL =
+  "https://my-json-server.typicode.com/dbStoreForProjects/MarinexData1/shippingPrices";
 
 const tableContainer = document.querySelector(".table-Container .body .col");
 

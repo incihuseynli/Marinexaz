@@ -1,7 +1,7 @@
 // Getting Services Datas
 
-// const SERVICES_URL = "http://localhost:3001/services";
-const SERVICES_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData1/services";
+const SERVICES_URL = 
+"https://my-json-server.typicode.com/dbStoreForProjects/MarinexData1/services";
 
 const ServiceCards = document.querySelector(".cards");
 

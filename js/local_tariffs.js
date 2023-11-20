@@ -2,8 +2,8 @@ const priceWeights = document.querySelector(".head");
 const pricesRows = document.querySelectorAll(".row p");
 const contentsContainer = document.querySelector(".contents");
 
-// const SHIPPING_PRICES_URL = "http://localhost:3001/places";
-const SHIPPING_PRICES_URL = "https://my-json-server.typicode.com/incihuseynli/MarinexData3/places";
+const SHIPPING_PRICES_URL =
+ "https://my-json-server.typicode.com/dbStoreForProjects/MarinexData3/places";
 
 fetch(SHIPPING_PRICES_URL)
   .then((response) => response.json())
